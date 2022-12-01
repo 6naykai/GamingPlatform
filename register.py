@@ -1,12 +1,15 @@
 import sys
 
-from PyQt5.QtGui import QWindow
+from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-from UI_enroll import Ui_MainWindow
+from UI.UI_enroll import Ui_MainWindow
 
 
 class Register(Ui_MainWindow, QMainWindow):
+
+    switch_window = QtCore.pyqtSignal()
+
     def __init__(self):
         super(Register, self).__init__()
         self.setupUi(self)           # 引入UI界面
@@ -16,6 +19,7 @@ class Register(Ui_MainWindow, QMainWindow):
     # 连接按钮和对应的函数
     def connecter(self):
         self.pushButton_enroll.clicked.connect(self.enroll)
+        self.pushButton_MyReturn.clicked.connect(self.MyReturn)
 
     # 注册响应
     def enroll(self):
@@ -23,15 +27,15 @@ class Register(Ui_MainWindow, QMainWindow):
 
     # 返回响应
     def MyReturn(self):
-        pass
+        self.switch_window.emit()
 
 
-def main():
-    app = QApplication(sys.argv)
-    register = Register()
-    register.show()
-    sys.exit(app.exec_())
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     app = QApplication(sys.argv)
+#     register = Register()
+#     register.show()
+#     sys.exit(app.exec_())
+#
+#
+# if __name__ == '__main__':
+#     main()

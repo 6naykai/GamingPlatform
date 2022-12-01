@@ -109,14 +109,27 @@
    <widget class="QPushButton" name="pushButton_enroll">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>310</y>
+      <x>170</x>
+      <y>300</y>
       <width>92</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
      <string>注册</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_MyReturn">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>300</y>
+      <width>92</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回</string>
     </property>
    </widget>
   </widget>

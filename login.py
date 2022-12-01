@@ -1,12 +1,14 @@
-import sys
+from PyQt5 import QtCore
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QMainWindow
 
-from PyQt5.QtGui import QWindow
-from PyQt5.QtWidgets import QApplication, QMainWindow
-
-from UI_login import Ui_MainWindow
+from UI.UI_login import Ui_MainWindow
 
 
 class Login(Ui_MainWindow, QMainWindow):
+
+    switch_window = QtCore.pyqtSignal()
+
     def __init__(self):
         super(Login, self).__init__()
         self.setupUi(self)                  # 引入UI界面
@@ -15,9 +17,9 @@ class Login(Ui_MainWindow, QMainWindow):
 
     # 连接按钮和对应的函数
     def connecter(self):
-        self.pushButton_landing.clicked.connect(self.landing)
-        self.pushButton_enroll.clicked.connect(self.enroll)
-        self.pushButton_quit.clicked.connect(self.quit)
+        self.pushButton_landing.clicked.connect(self.landing)           # 登陆
+        self.pushButton_enroll.clicked.connect(self.enroll)             # 注册
+        self.pushButton_quit.clicked.connect(QCoreApplication.quit)     # 退出
 
     # 登陆功能
     def landing(self):
@@ -25,19 +27,15 @@ class Login(Ui_MainWindow, QMainWindow):
 
     # 注册功能
     def enroll(self):
-        pass
-
-    # 退出功能
-    def quit(self):
-        pass
+        self.switch_window.emit()
 
 
-def main():
-    app = QApplication(sys.argv)
-    login = Login()
-    login.show()
-    sys.exit(app.exec_())
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     app = QApplication(sys.argv)
+#     login = Login()
+#     login.show()
+#     sys.exit(app.exec_())
+#
+#
+# if __name__ == '__main__':
+#     main()
