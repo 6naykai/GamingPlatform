@@ -33,8 +33,10 @@ def main():
     app = QApplication(sys.argv)
     # 设置窗口icon
     app.setWindowIcon(QIcon('pic/favicon.ico'))
+    # 控制窗口切换
     controller = Controller()
     controller.show_login()
+    # 退出应用
     sys.exit(app.exec_())
 
 

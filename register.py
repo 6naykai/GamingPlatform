@@ -8,6 +8,7 @@ from UI.UI_enroll import Ui_MainWindow
 
 class Register(Ui_MainWindow, QMainWindow):
 
+    # 窗口切换信号
     switch_window = QtCore.pyqtSignal()
 
     def __init__(self):
@@ -28,14 +29,3 @@ class Register(Ui_MainWindow, QMainWindow):
     # 返回响应
     def MyReturn(self):
         self.switch_window.emit()
-
-
-# def main():
-#     app = QApplication(sys.argv)
-#     register = Register()
-#     register.show()
-#     sys.exit(app.exec_())
-#
-#
-# if __name__ == '__main__':
-#     main()

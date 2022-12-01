@@ -7,6 +7,7 @@ from UI.UI_login import Ui_MainWindow
 
 class Login(Ui_MainWindow, QMainWindow):
 
+    # 窗口切换信号
     switch_window = QtCore.pyqtSignal()
 
     def __init__(self):
@@ -28,14 +29,3 @@ class Login(Ui_MainWindow, QMainWindow):
     # 注册功能
     def enroll(self):
         self.switch_window.emit()
-
-
-# def main():
-#     app = QApplication(sys.argv)
-#     login = Login()
-#     login.show()
-#     sys.exit(app.exec_())
-#
-#
-# if __name__ == '__main__':
-#     main()
