@@ -14,40 +14,166 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.setEnabled(True)
+        MainWindow.resize(911, 685)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.pushButton_landing = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_landing.setGeometry(QtCore.QRect(160, 370, 92, 28))
-        self.pushButton_landing.setObjectName("pushButton_landing")
-        self.pushButton_enroll = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_enroll.setGeometry(QtCore.QRect(280, 370, 92, 28))
-        self.pushButton_enroll.setObjectName("pushButton_enroll")
-        self.pushButton_quit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_quit.setGeometry(QtCore.QRect(400, 370, 92, 28))
-        self.pushButton_quit.setObjectName("pushButton_quit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(320, 300, 113, 21))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(320, 250, 113, 21))
-        self.lineEdit_3.setObjectName("lineEdit_3")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(240, 250, 72, 15))
+        self.label.setGeometry(QtCore.QRect(80, 90, 340, 490))
+        self.label.setStyleSheet("border-image: url(:/images/images/background.jpeg);\n"
+"border-top-left-radius:30px;\n"
+"border-bottom-left-radius:30px;")
+        self.label.setText("")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(240, 300, 72, 15))
+        self.label_2.setGeometry(QtCore.QRect(420, 90, 421, 491))
+        self.label_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-top-right-radius:30px;\n"
+"border-bottom-right-radius:30px;")
+        self.label_2.setText("")
         self.label_2.setObjectName("label_2")
+        self.widget = QtWidgets.QWidget(self.centralwidget)
+        self.widget.setEnabled(True)
+        self.widget.setGeometry(QtCore.QRect(520, 170, 208, 46))
+        self.widget.setObjectName("widget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget)
+        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.pushButton_landing = QtWidgets.QPushButton(self.widget)
+        self.pushButton_landing.setEnabled(True)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_landing.setFont(font)
+        self.pushButton_landing.setStyleSheet("#pushButton_landing{\n"
+"    border:none;\n"
+"    color: black;\n"
+"}\n"
+"#pushButton_landing:focus{\n"
+"    \n"
+"}")
+        self.pushButton_landing.setObjectName("pushButton_landing")
+        self.horizontalLayout.addWidget(self.pushButton_landing)
+        self.line = QtWidgets.QFrame(self.widget)
+        self.line.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.horizontalLayout.addWidget(self.line)
+        self.pushButton_enroll = QtWidgets.QPushButton(self.widget)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_enroll.setFont(font)
+        self.pushButton_enroll.setStyleSheet("#pushButton_enroll{\n"
+"    border:none;\n"
+"    color: rgb(186, 186, 186);\n"
+"}\n"
+"#pushButton_enroll:focus{\n"
+"    \n"
+"}")
+        self.pushButton_enroll.setObjectName("pushButton_enroll")
+        self.horizontalLayout.addWidget(self.pushButton_enroll)
+        self.widget_landing = QtWidgets.QWidget(self.centralwidget)
+        self.widget_landing.setGeometry(QtCore.QRect(440, 220, 381, 341))
+        self.widget_landing.setObjectName("widget_landing")
+        self.lineEdit = QtWidgets.QLineEdit(self.widget_landing)
+        self.lineEdit.setGeometry(QtCore.QRect(20, 50, 341, 61))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+"border-radius:8px;")
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.widget_landing)
+        self.lineEdit_2.setGeometry(QtCore.QRect(20, 140, 341, 61))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+"border-radius:8px;")
+        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.pushButton_login = QtWidgets.QPushButton(self.widget_landing)
+        self.pushButton_login.setGeometry(QtCore.QRect(20, 260, 341, 51))
+        self.pushButton_login.setStyleSheet("#pushButton_login{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border:3px solid rgb(0,0,0);\n"
+"    border-radius:8px;\n"
+"}\n"
+"#pushButton_login:hover{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#pushButton_login:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
+        self.pushButton_login.setObjectName("pushButton_login")
+        self.checkBox = QtWidgets.QCheckBox(self.widget_landing)
+        self.checkBox.setGeometry(QtCore.QRect(30, 220, 88, 19))
+        self.checkBox.setObjectName("checkBox")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(790, 110, 41, 31))
+        self.pushButton_2.setStyleSheet("border:none;")
+        self.pushButton_2.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_2.setIcon(icon)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.widget_enroll = QtWidgets.QWidget(self.centralwidget)
+        self.widget_enroll.setGeometry(QtCore.QRect(440, 220, 381, 341))
+        self.widget_enroll.setObjectName("widget_enroll")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.widget_enroll)
+        self.lineEdit_3.setGeometry(QtCore.QRect(20, 20, 341, 61))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.lineEdit_3.setFont(font)
+        self.lineEdit_3.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+"border-radius:8px;")
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.widget_enroll)
+        self.lineEdit_4.setGeometry(QtCore.QRect(20, 100, 341, 61))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.lineEdit_4.setFont(font)
+        self.lineEdit_4.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+"border-radius:8px;")
+        self.lineEdit_4.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.widget_enroll)
+        self.lineEdit_5.setGeometry(QtCore.QRect(20, 180, 341, 61))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.lineEdit_5.setFont(font)
+        self.lineEdit_5.setStyleSheet("border:1px solid rgb(0,0,0);\n"
+"border-radius:8px;")
+        self.lineEdit_5.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.pushButton_register = QtWidgets.QPushButton(self.widget_enroll)
+        self.pushButton_register.setGeometry(QtCore.QRect(20, 260, 341, 51))
+        self.pushButton_register.setStyleSheet("#pushButton_register{\n"
+"    background-color: rgb(0, 0, 0);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border:3px solid rgb(0,0,0);\n"
+"    border-radius:8px;\n"
+"}\n"
+"#pushButton_register:hover{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#pushButton_register:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}")
+        self.pushButton_register.setObjectName("pushButton_register")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pushButton_2.clicked.connect(MainWindow.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -55,6 +181,12 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton_landing.setText(_translate("MainWindow", "登陆"))
         self.pushButton_enroll.setText(_translate("MainWindow", "注册"))
-        self.pushButton_quit.setText(_translate("MainWindow", "退出"))
-        self.label.setText(_translate("MainWindow", "账号："))
-        self.label_2.setText(_translate("MainWindow", "密码："))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "账号："))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "密码："))
+        self.pushButton_login.setText(_translate("MainWindow", "登陆"))
+        self.checkBox.setText(_translate("MainWindow", "记住密码"))
+        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "输入账号："))
+        self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "设置密码："))
+        self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "确认密码："))
+        self.pushButton_register.setText(_translate("MainWindow", "注册"))
+import resource_rc

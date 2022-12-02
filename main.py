@@ -15,9 +15,9 @@ class Controller:
     # 显示登陆窗口
     def show_login(self):
         self.login = Login()
-        if self.register is not None:
-            self.register.close()
-        self.login.switch_window.connect(self.show_register)
+        # if self.register is not None:
+        #     self.register.close()
+        # self.login.switch_window.connect(self.show_register)
         self.login.show()
 
     # 显示注册窗口
