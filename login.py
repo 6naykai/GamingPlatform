@@ -1,11 +1,12 @@
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QCoreApplication, Qt, QPoint
 from PyQt5.QtGui import QMouseEvent
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from UI.UI_login import Ui_MainWindow
 
 
+# 登陆窗口类
 class Login(Ui_MainWindow, QMainWindow):
 
     # 窗口切换信号
@@ -29,6 +30,9 @@ class Login(Ui_MainWindow, QMainWindow):
         self.widget_enroll.hide()                       # 隐藏注册页面
         # 添加阴影
         self.add_shadow()
+        # 登陆设置
+        self.list = [{"account": ["password", 3]}]      # 账户列表
+        self.timeOut = 3                                # 登陆的错误上限
 
     # 连接按钮和对应的函数
     def connecter(self):
@@ -71,11 +75,83 @@ class Login(Ui_MainWindow, QMainWindow):
 
     # 实现登陆功能
     def login(self):
-        pass
+        """
+        登陆确认按钮出发函数,包括一些合法性的检测,账户信息的输入与记录
+        """
+        account = self.lineEdit_login_account.text()
+        password = self.lineEdit_login_password.text()
+        if str(account) == "":
+            QMessageBox.warning(self, "注意", "账号不能为空")
+        elif str(password) == "":
+            QMessageBox.warning(self, "注意", "密码不能为空")
+        else:
+            otherAccount = []         # 遍历过的账户存放在otherAccount列表中
+            # 遍历整个账户列表查询该账户
+            while self.list:
+                temp = self.list.pop()
+                # 若查到该账户
+                if str(account) in temp:
+                    # 若账户已被锁定
+                    if temp[str(account)][1] == 0:
+                        QMessageBox.warning(self, "注意", "错误3次，账户已被锁定！")
+                        self.list = self.list + [temp] + otherAccount
+                        return
+                    # 若账户未被锁定
+                    else:
+                        # 若密码正确
+                        if temp[str(account)][0] == str(password):
+                            QMessageBox.information(self, "提示", "登陆成功")
+                            # 成功登陆后跳转到验证窗口
+                            self.switch_window.emit()
+                            return      # 后续添加恢复账户可用输入错误机会
+                        # 若密码错误
+                        else:
+                            temp[str(account)][1] -= 1      # 账户可用输入错误机会-1
+                            # 若账户此时已无可用输入错误机会
+                            if temp[str(account)][1] == 0:
+                                QMessageBox.warning(self, "注意", "错误3次，账户已被锁定！")
+                                self.list = self.list + [temp] + otherAccount
+                                return
+                            # 若账户此时还有可用错误机会
+                            QMessageBox.warning(self, "注意", "密码错误！您还有" + str(temp[str(account)][1]) + "次输入机会。")
+                            self.list = self.list + [temp] + otherAccount
+                            self.lineEdit_login_password.clear()    # 清空密码输入框
+                            return
+                # 若未查到该用户
+                else:
+                    otherAccount.append(temp)
+            # 若遍历完整个账户列表仍未查到该用户
+            QMessageBox.warning(self, "注意", "账户不存在！")
+            # 清空账户输入框和密码输入框
+            self.lineEdit_login_account.clear()
+            self.lineEdit_login_password.clear()
 
     # 实现注册功能
     def register(self):
-        pass
+        """
+        注册确认按钮出发函数,包括一些合法性的检测,账户信息的输入与记录
+        """
+        temp = {}       # 存放当前账户信息
+        account = self.lineEdit_register_account.text()
+        password = self.lineEdit_register_password.text()
+        passwordConfirm = self.lineEdit_register_passwordConfirm.text()
+        if str(account) == "":
+            QMessageBox.warning(self, "注意", "账号不能为空")
+        elif str(password) == "":
+            QMessageBox.warning(self, "注意", "密码不能为空")
+        elif password != passwordConfirm:
+            QMessageBox.warning(self, "注意", "两次输入密码不一致")
+            self.lineEdit_register_password.clear()
+            self.lineEdit_register_passwordConfirm.clear()
+        else:
+            temp[str(account)] = [str(password), self.timeOut]
+            self.list.append(temp)
+            QMessageBox.information(self, "提示", "注册成功")
+            # 注册成功则跳转回登陆页面,并清空注册框内容
+            self.landing()
+            self.lineEdit_register_account.clear()
+            self.lineEdit_register_password.clear()
+            self.lineEdit_register_passwordConfirm.clear()
 
     # 控件阴影添加
     def add_shadow(self):

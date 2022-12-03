@@ -1,15 +1,17 @@
 import sys
 
-from PyQt5.QtGui import QWindow, QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication
 
 from login import Login
-from register import Register
+from verify import Verify
 
 
+# 窗口控制类——用于控制窗口切换
 class Controller:
     def __init__(self):
-        self.register = None
+        self.verify = None
+        # self.register = None
         self.login = None
 
     # 显示登陆窗口
@@ -17,15 +19,22 @@ class Controller:
         self.login = Login()
         # if self.register is not None:
         #     self.register.close()
-        # self.login.switch_window.connect(self.show_register)
+        self.login.switch_window.connect(self.show_verify)
         self.login.show()
 
-    # 显示注册窗口
-    def show_register(self):
-        self.register = Register()
+    # 显示验证窗口
+    def show_verify(self):
+        self.verify = Verify()
         self.login.close()
-        self.register.switch_window.connect(self.show_login)
-        self.register.show()
+        self.verify.show()
+        pass
+
+    # # 显示注册窗口
+    # def show_register(self):
+    #     self.register = Register()
+    #     self.login.close()
+    #     self.register.switch_window.connect(self.show_login)
+    #     self.register.show()
 
 
 def main():

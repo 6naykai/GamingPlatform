@@ -1,9 +1,7 @@
-import sys
-
 from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QMainWindow
 
-from UI.UI_enroll import Ui_MainWindow
+from 备份.UI_enroll import Ui_MainWindow
 
 
 class Register(Ui_MainWindow, QMainWindow):

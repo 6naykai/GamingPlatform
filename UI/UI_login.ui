@@ -41,7 +41,7 @@ border-bottom-left-radius:30px;</string>
       <x>420</x>
       <y>90</y>
       <width>421</width>
-      <height>491</height>
+      <height>490</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -148,7 +148,7 @@ border-bottom-right-radius:30px;</string>
       <height>341</height>
      </rect>
     </property>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_login_account">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -170,7 +170,7 @@ border-radius:8px;</string>
       <string>账号：</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="lineEdit_login_password">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -224,7 +224,7 @@ border-radius:8px;</string>
       <string>登陆</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="checkBox_rememberPassword">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -267,7 +267,7 @@ border-radius:8px;</string>
       <height>341</height>
      </rect>
     </property>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="lineEdit_register_account">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -289,7 +289,7 @@ border-radius:8px;</string>
       <string>输入账号：</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_4">
+    <widget class="QLineEdit" name="lineEdit_register_password">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -314,7 +314,7 @@ border-radius:8px;</string>
       <string>设置密码：</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="lineEdit_register_passwordConfirm">
      <property name="geometry">
       <rect>
        <x>20</x>
