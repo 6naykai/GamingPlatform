@@ -75,7 +75,7 @@ class Ui_MainWindow(object):
         self.lineEdit_verify_answer.setFont(font)
         self.lineEdit_verify_answer.setStyleSheet("border:1px solid rgb(0,0,0);\n"
 "border-radius:8px;")
-        self.lineEdit_verify_answer.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_verify_answer.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.lineEdit_verify_answer.setObjectName("lineEdit_verify_answer")
         self.pushButton_verify = QtWidgets.QPushButton(self.widget_enroll)
         self.pushButton_verify.setGeometry(QtCore.QRect(20, 260, 341, 51))

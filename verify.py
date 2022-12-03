@@ -144,7 +144,11 @@ class Verify(Ui_MainWindow, QMainWindow):
     # 实现验证功能
     def verify(self):
         # 根据音频媒体索引链接字典得到当前播放歌曲路径
-        music = self.music_index_dict[str(self.playlist.currentIndex())]
+        try:
+            music = self.music_index_dict[str(self.playlist.currentIndex())]
+        except KeyError:
+            QMessageBox.warning(self, "注意", "请先听提示音频！")
+            return
         # 根据label_question的text值得到question
         question = self.label_question.text()
         # 循环hash表找到匹配验证答案

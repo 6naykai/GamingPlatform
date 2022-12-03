@@ -156,7 +156,7 @@ border-bottom-left-radius:30px;</string>
 border-radius:8px;</string>
      </property>
      <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
+      <enum>QLineEdit::Normal</enum>
      </property>
      <property name="placeholderText">
       <string>输入验证答案：</string>
