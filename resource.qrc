@@ -1,8 +1,14 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/sound_off.png</file>
+    <file>icons/sound_on.png</file>
+    <file>icons/question_change.png</file>
+    <file>icons/play.png</file>
+    <file>icons/music_change.png</file>
     <file>icons/close.png</file>
   </qresource>
   <qresource prefix="images">
+    <file>images/question/question1.jpg</file>
     <file>images/background.jpeg</file>
   </qresource>
 </RCC>

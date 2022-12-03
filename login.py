@@ -33,6 +33,8 @@ class Login(Ui_MainWindow, QMainWindow):
         # 登陆设置
         self.list = [{"account": ["password", 3]}]      # 账户列表
         self.timeOut = 3                                # 登陆的错误上限
+        # 便捷登陆设置
+        self.list.append({"a": ["a", 100]})
 
     # 连接按钮和对应的函数
     def connecter(self):
@@ -136,17 +138,17 @@ class Login(Ui_MainWindow, QMainWindow):
         password = self.lineEdit_register_password.text()
         passwordConfirm = self.lineEdit_register_passwordConfirm.text()
         if str(account) == "":
-            QMessageBox.warning(self, "注意", "账号不能为空")
+            QMessageBox.warning(self, "注意", "账号不能为空!")
         elif str(password) == "":
-            QMessageBox.warning(self, "注意", "密码不能为空")
+            QMessageBox.warning(self, "注意", "密码不能为空!")
         elif password != passwordConfirm:
-            QMessageBox.warning(self, "注意", "两次输入密码不一致")
+            QMessageBox.warning(self, "注意", "两次输入密码不一致!")
             self.lineEdit_register_password.clear()
             self.lineEdit_register_passwordConfirm.clear()
         else:
             temp[str(account)] = [str(password), self.timeOut]
             self.list.append(temp)
-            QMessageBox.information(self, "提示", "注册成功")
+            QMessageBox.information(self, "提示", "注册成功!")
             # 注册成功则跳转回登陆页面,并清空注册框内容
             self.landing()
             self.lineEdit_register_account.clear()
