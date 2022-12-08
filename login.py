@@ -34,11 +34,34 @@ class Login(Ui_MainWindow, QMainWindow):
         # 登陆设置
         self.list = [{"account": ["password", 3]}]      # 账户列表
         self.timeOut = 3                                # 登陆的错误上限
-        # 便捷登陆设置
+        # 便捷登陆设置：用于程序员快速测试页面功能
         self.list.append({"a": ["a", 100]})
         # 数据库的设置
         self.database = Database()
         self.user_init()
+        self.user_remembered_init()
+
+    # 数据库记住用户表的接口函数：记住账户信息初始化
+    def user_remembered_init(self):
+        user_remembered_data = self.database.select("user_remembered")
+        # 若记住用户表不为空,则根据记住用户表初始化登陆页面
+        if user_remembered_data:
+            user_name = user_remembered_data[0][0]
+            user_secret = user_remembered_data[0][1]
+            is_remembered = user_remembered_data[0][2]
+            self.lineEdit_login_account.setText(user_name)
+            if is_remembered:
+                self.lineEdit_login_password.setText(user_secret)
+                self.checkBox_rememberPassword.setChecked(True)
+
+    # 数据库记住用户表的接口函数：登陆成功,设置记住的账户信息为本次登陆的账户
+    def user_remembered_reset(self, user_name, user_secret, is_remembered):
+        user_remembered_data = self.database.select("user_remembered")
+        # 若记住用户表不为空,则删除记住用户信息
+        if user_remembered_data:
+            self.database.delete("user_remembered", [user_remembered_data[0][0]])
+        # 将本次登陆的账户插入记住用户表
+        self.database.insert("user_remembered", [user_name, user_secret, is_remembered])
 
     # 数据库用户表的接口函数：账户列表信息初始化
     def user_init(self):
@@ -124,6 +147,9 @@ class Login(Ui_MainWindow, QMainWindow):
                     else:
                         # 若密码正确
                         if temp[str(account)][0] == str(password):
+                            # 通过数据库实现记住账户功能
+                            self.user_remembered_reset(str(account), str(password),
+                                                       self.checkBox_rememberPassword.isChecked())
                             QMessageBox.information(self, "提示", "登陆成功")
                             # 成功登陆后跳转到验证窗口
                             self.switch_window.emit()

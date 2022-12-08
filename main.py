@@ -12,6 +12,7 @@ class Controller:
     def __init__(self):
         self.verify = None
         self.login = None
+        # 账户信息：用于窗口间传递
 
     # 显示登陆与注册窗口
     def show_login(self):
