@@ -4,6 +4,7 @@ from PyQt5.QtGui import QMouseEvent
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from UI.UI_login import Ui_MainWindow
+from database import Database
 
 
 # 登陆窗口类
@@ -35,6 +36,27 @@ class Login(Ui_MainWindow, QMainWindow):
         self.timeOut = 3                                # 登陆的错误上限
         # 便捷登陆设置
         self.list.append({"a": ["a", 100]})
+        # 数据库的设置
+        self.database = Database()
+        self.user_init()
+
+    # 数据库用户表的接口函数：账户列表信息初始化
+    def user_init(self):
+        user_data = self.database.select("user_table")
+        for i in range(len(user_data)):
+            # 若用户被封禁,则将其登陆错误上限设置为0,否则设置为timeOut
+            if user_data[i][2]:
+                self.list.append({user_data[i][0]: [user_data[i][1], 0]})
+            else:
+                self.list.append({user_data[i][0]: [user_data[i][1], self.timeOut]})
+
+    # 数据库用户表的接口函数：注册插入新账户信息
+    def user_insert(self, user_name, user_secret):
+        self.database.insert("user_table", [user_name, user_secret, False])
+
+    # 数据库用户表的接口函数：更新用户表信息(封禁账户)
+    def user_update(self, account):
+        self.database.update("user_table", [account, "forbidden", True])
 
     # 连接按钮和对应的函数
     def connecter(self):
@@ -105,12 +127,13 @@ class Login(Ui_MainWindow, QMainWindow):
                             QMessageBox.information(self, "提示", "登陆成功")
                             # 成功登陆后跳转到验证窗口
                             self.switch_window.emit()
-                            return      # 后续添加恢复账户可用输入错误机会
+                            return      # 后续添加恢复账户可用输入错误机会(已实现,通过数据库进行隔离)
                         # 若密码错误
                         else:
                             temp[str(account)][1] -= 1      # 账户可用输入错误机会-1
                             # 若账户此时已无可用输入错误机会
                             if temp[str(account)][1] == 0:
+                                self.user_update(str(account))      # 通过数据库将账号封禁
                                 QMessageBox.warning(self, "注意", "错误3次，账户已被锁定！")
                                 self.list = self.list + [temp] + otherAccount
                                 return
@@ -124,6 +147,7 @@ class Login(Ui_MainWindow, QMainWindow):
                     otherAccount.append(temp)
             # 若遍历完整个账户列表仍未查到该用户
             QMessageBox.warning(self, "注意", "账户不存在！")
+            self.list = otherAccount
             # 清空账户输入框和密码输入框
             self.lineEdit_login_account.clear()
             self.lineEdit_login_password.clear()
@@ -147,7 +171,8 @@ class Login(Ui_MainWindow, QMainWindow):
             self.lineEdit_register_passwordConfirm.clear()
         else:
             temp[str(account)] = [str(password), self.timeOut]
-            self.list.append(temp)
+            self.list.append(temp)                             # 用户列表添加temp用户
+            self.user_insert(str(account), str(password))      # 数据库用户表添加temp用户
             QMessageBox.information(self, "提示", "注册成功!")
             # 注册成功则跳转回登陆页面,并清空注册框内容
             self.landing()

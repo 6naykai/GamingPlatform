@@ -11,14 +11,11 @@ from verify import Verify
 class Controller:
     def __init__(self):
         self.verify = None
-        # self.register = None
         self.login = None
 
-    # 显示登陆窗口
+    # 显示登陆与注册窗口
     def show_login(self):
         self.login = Login()
-        # if self.register is not None:
-        #     self.register.close()
         self.login.switch_window.connect(self.show_verify)
         self.login.show()
 
@@ -27,14 +24,10 @@ class Controller:
         self.verify = Verify()
         self.login.close()
         self.verify.show()
-        pass
 
-    # # 显示注册窗口
-    # def show_register(self):
-    #     self.register = Register()
-    #     self.login.close()
-    #     self.register.switch_window.connect(self.show_login)
-    #     self.register.show()
+    # 显示GamingPlatform主页面
+    def show_gameScreen(self):
+        pass
 
 
 def main():
