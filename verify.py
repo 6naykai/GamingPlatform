@@ -162,6 +162,8 @@ class Verify(Ui_MainWindow, QMainWindow):
         # 若用户输入验证答案正确,则给出提示信息并跳转客户端
         if verify_answer == answer:
             QMessageBox.information(self, "提示", "恭喜你，得到了哥哥的认可！")
+            # 成功验证后跳转到使用界面窗口
+            self.switch_window.emit()
         # 若用户输入验证答案错误,则给出提示信息并清空输入框
         else:
             QMessageBox.warning(self, "注意", "验证答案错误！")
@@ -170,8 +172,8 @@ class Verify(Ui_MainWindow, QMainWindow):
     # 音频初始化
     def music_init(self):
         self.player.setPlaylist(self.playlist)
-        self.music_list = ['musics/3.mp3',
-                           'musics/2.mp3']
+        self.music_list = ['musics/verify_jntm.mp3',
+                           'musics/verify_hugme.mp3']
         index = 0
         for music_path in self.music_list:
             self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile(music_path)))    # 媒体播放列表添加歌曲
@@ -189,12 +191,12 @@ class Verify(Ui_MainWindow, QMainWindow):
     # 验证hash表初始化
     def hashTable_init(self):
         self.verify_hashTable = {0: ["歌曲", "问题", "答案"],
-                                 1: ["musics/2.mp3", "这首歌的歌名是？", "hug me"],
-                                 2: ["musics/3.mp3", "这首歌的歌名是？", "只因你太美"],
-                                 3: ["musics/2.mp3", "哥哥的练习时长是多少？", "两年半"],
-                                 4: ["musics/3.mp3", "哥哥的练习时长是多少？", "两年半"],
-                                 5: ["musics/2.mp3", "哥哥的成名曲是什么？", "只因你太美"],
-                                 6: ["musics/3.mp3", "哥哥的成名曲是什么？", "只因你太美"]}
+                                 1: ["musics/verify_hugme.mp3", "这首歌的歌名是？", "hug me"],
+                                 2: ["musics/verify_jntm.mp3", "这首歌的歌名是？", "只因你太美"],
+                                 3: ["musics/verify_hugme.mp3", "哥哥的练习时长是多少？", "两年半"],
+                                 4: ["musics/verify_jntm.mp3", "哥哥的练习时长是多少？", "两年半"],
+                                 5: ["musics/verify_hugme.mp3", "哥哥的成名曲是什么？", "只因你太美"],
+                                 6: ["musics/verify_jntm.mp3", "哥哥的成名曲是什么？", "只因你太美"]}
 
     # 控件阴影添加
     def add_shadow(self):

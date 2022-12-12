@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QApplication
 
 from login import Login
 from verify import Verify
+from game_screen import GameScreen
 
 
 # 窗口控制类——用于控制窗口切换
@@ -12,6 +13,7 @@ class Controller:
     def __init__(self):
         self.verify = None
         self.login = None
+        self.gameScreen = None
         # 账户信息：用于窗口间传递
 
     # 显示登陆与注册窗口
@@ -24,10 +26,14 @@ class Controller:
     def show_verify(self):
         self.verify = Verify()
         self.login.close()
+        self.verify.switch_window.connect(self.show_gameScreen)
         self.verify.show()
 
     # 显示GamingPlatform主页面
     def show_gameScreen(self):
+        self.gameScreen = GameScreen()
+        self.verify.close()
+        self.gameScreen.show()
         pass
 
 
