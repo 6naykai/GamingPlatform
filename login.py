@@ -4,7 +4,7 @@ from PyQt5.QtGui import QMouseEvent
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 
 from UI.UI_login import Ui_MainWindow
-from database import Database
+from database.database import Database
 
 
 # 登陆窗口类

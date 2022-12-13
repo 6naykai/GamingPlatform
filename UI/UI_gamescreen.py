@@ -315,7 +315,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 772, 628))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 775, 634))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.verticalLayout_13 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_13.setContentsMargins(36, 36, 124, 36)
@@ -325,7 +325,7 @@ class Ui_MainWindow(object):
         self.widget_3.setMinimumSize(QtCore.QSize(0, 121))
         self.widget_3.setMaximumSize(QtCore.QSize(16777215, 121))
         self.widget_3.setStyleSheet(".QWidget{\n"
-"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(234, 249, 253), stop:1 rgb(155, 230, 237));\n"
+"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
@@ -396,11 +396,10 @@ class Ui_MainWindow(object):
         self.widget_7.setMinimumSize(QtCore.QSize(0, 121))
         self.widget_7.setMaximumSize(QtCore.QSize(16777215, 121))
         self.widget_7.setStyleSheet(".QWidget{\n"
-"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(234, 249, 253), stop:1 rgb(155, 230, 237));\n"
+"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
-"\n"
 "")
         self.widget_7.setObjectName("widget_7")
         self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.widget_7)
@@ -467,11 +466,10 @@ class Ui_MainWindow(object):
         self.widget_11.setMinimumSize(QtCore.QSize(0, 121))
         self.widget_11.setMaximumSize(QtCore.QSize(16777215, 121))
         self.widget_11.setStyleSheet(".QWidget{\n"
-"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(234, 249, 253), stop:1 rgb(155, 230, 237));\n"
+"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
-"\n"
 "")
         self.widget_11.setObjectName("widget_11")
         self.horizontalLayout_16 = QtWidgets.QHBoxLayout(self.widget_11)
@@ -538,11 +536,10 @@ class Ui_MainWindow(object):
         self.widget_15.setMinimumSize(QtCore.QSize(0, 121))
         self.widget_15.setMaximumSize(QtCore.QSize(16777215, 121))
         self.widget_15.setStyleSheet(".QWidget{\n"
-"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(234, 249, 253), stop:1 rgb(155, 230, 237));\n"
+"    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
-"\n"
 "")
         self.widget_15.setObjectName("widget_15")
         self.horizontalLayout_20 = QtWidgets.QHBoxLayout(self.widget_15)

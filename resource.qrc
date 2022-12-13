@@ -7,8 +7,11 @@
     <file>icons/music_change.png</file>
     <file>icons/close.png</file>
   </qresource>
+  <qresource prefix="pic">
+    <file>pic/favicon.ico</file>
+    <file>pic/logo.jpg</file>
+  </qresource>
   <qresource prefix="images">
-    <file>images/question/question1.jpg</file>
     <file>images/background.jpeg</file>
   </qresource>
 </RCC>

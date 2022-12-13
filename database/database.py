@@ -1,45 +1,7 @@
-import psycopg2
+from .database_interface import ExecuSQL, getData
 
 
-# # 程序用到的sql语句
-# ins = "insert into students (Sno,Sname,Semail,Scredit,Ssex) values ('{}','{}','{}',{},'{}');"
-# del = "delete from students where Sno='{}'"
-# sel = "select * from students"
-# upd = "update students set Sname='{}',Semail='{}',Scredit={},Ssex='{}' where Sno='{}';"
-
-
-# 建立连接函数：连接数据库,返回psycopg2的连接对象
-def create_conn():
-    conn = psycopg2.connect(database="GamingPlatform",
-                            user="gaussdb",
-                            password="openGauss@2022",
-                            host="127.0.0.1",
-                            port="5432")
-    return conn
-
-
-# sql语句执行函数(无返回值),argv:需要执行的sql语句
-def ExecuSQL(argv):
-    conn = create_conn()
-    cur = conn.cursor()  # 生成游标对象
-    cur.execute(argv)  # 执行SQL语句
-    conn.commit()
-    cur.close()  # 关闭游标
-    conn.close()  # 关闭连接
-
-
-# sql语句执行函数(有返回值),argv:需要执行的sql语句
-def getData(argv):
-    conn = create_conn()
-    cur = conn.cursor()  # 生成游标对象
-    cur.execute(argv)  # 执行SQL语句
-    data = cur.fetchall()  # 通过fetchall方法获得数据
-    cur.close()  # 关闭游标
-    conn.close()  # 关闭连接
-    return data  # 返回数据列表
-
-
-# 用户平台的数据库接口类
+# 用户平台的数据库接口类(gaussdb系统管理员权限)
 class Database:
     def __init__(self):
         self.__ins_user = None

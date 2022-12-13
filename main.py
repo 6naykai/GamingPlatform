@@ -14,7 +14,6 @@ class Controller:
         self.verify = None
         self.login = None
         self.gameScreen = None
-        # 账户信息：用于窗口间传递
 
     # 显示登陆与注册窗口
     def show_login(self):
