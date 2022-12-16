@@ -1,25 +1,24 @@
 <RCC>
   <qresource prefix="icons">
     <file>icons/play_game.png</file>
-    <file>images/2048.jpg</file>
-    <file>images/background.jpeg</file>
-    <file>images/background.png</file>
-    <file>images/FB.jpg</file>
-    <file>images/FJ.jpg</file>
-    <file>images/icon.ico</file>
-    <file>images/maze.jpg</file>
-    <file>images/PP.jpg</file>
-    <file>images/screen_background.png</file>
-    <file>images/TCS.jpg</file>
-    <file>images/tetris.jpg</file>
-    <file>images/TXZ.jpg</file>
-    <file>images/xxl.jpg</file>
     <file>icons/sound_off.png</file>
     <file>icons/sound_on.png</file>
     <file>icons/question_change.png</file>
     <file>icons/play.png</file>
     <file>icons/music_change.png</file>
     <file>icons/close.png</file>
+  </qresource>
+  <qresource prefix="youxi">
+    <file>images/2048.jpg</file>
+    <file>images/FB.jpg</file>
+    <file>images/FJ.jpg</file>
+    <file>images/icon.ico</file>
+    <file>images/maze.jpg</file>
+    <file>images/PP.jpg</file>
+    <file>images/TCS.jpg</file>
+    <file>images/tetris.jpg</file>
+    <file>images/TXZ.jpg</file>
+    <file>images/xxl.jpg</file>
   </qresource>
   <qresource prefix="pic">
     <file>pic/logo1.jpg</file>

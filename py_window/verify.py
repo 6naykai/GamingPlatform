@@ -61,10 +61,10 @@ class Verify(Ui_MainWindow, QMainWindow):
     def music_play_pause(self):
         if self.player.state() == 1:
             self.player.pause()
-            self.pushButton_play_pause.setIcon(QIcon('../icons/play.png'))
+            self.pushButton_play_pause.setIcon(QIcon('icons/play.png'))
         else:
             self.player.play()
-            self.pushButton_play_pause.setIcon(QIcon('../icons/pause.png'))
+            self.pushButton_play_pause.setIcon(QIcon('icons/pause.png'))
 
     # 静音功能
     def sound_change(self):
@@ -95,17 +95,17 @@ class Verify(Ui_MainWindow, QMainWindow):
             self.playlist.next()
         # 根据当前播放信息更改播放图标
         if self.player.state() == 1:
-            self.pushButton_play_pause.setIcon(QIcon('../icons/pause.png'))
+            self.pushButton_play_pause.setIcon(QIcon('icons/pause.png'))
         else:
-            self.pushButton_play_pause.setIcon(QIcon('../icons/play.png'))
+            self.pushButton_play_pause.setIcon(QIcon('icons/play.png'))
 
     # 音量大小改变功能
     def volume_change(self, value):
         self.player.setVolume(value)
         if value == 0:
-            self.pushButton_sound.setIcon(QIcon('../icons/sound_off.png'))
+            self.pushButton_sound.setIcon(QIcon('icons/sound_off.png'))
         else:
-            self.pushButton_sound.setIcon(QIcon('../icons/sound_on.png'))
+            self.pushButton_sound.setIcon(QIcon('icons/sound_on.png'))
 
     # 歌曲进度改变功能
     def progress_change(self, value):
@@ -121,7 +121,7 @@ class Verify(Ui_MainWindow, QMainWindow):
         seconds -= minutes * 60
         if minutes == 0 and seconds == 0:
             self.label_time.setText('--/--')
-            self.pushButton_play_pause.setIcon(QIcon('../icons/play.png'))
+            self.pushButton_play_pause.setIcon(QIcon('icons/play.png'))
         else:
             if seconds < 10:
                 self.label_time.setText('{}:0{}'.format(minutes, seconds))

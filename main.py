@@ -1,8 +1,6 @@
 import sys
-
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication
-
 from py_window import Login, Verify, GameScreen
 from database.database_root import Database_root
 
@@ -14,7 +12,7 @@ class Controller:
         self.login = None
         self.gameScreen = None
         # 账户信息
-        self.account = []
+        self.account = ""
         self.database = Database_root()
 
     # 显示登陆与注册窗口
@@ -34,6 +32,7 @@ class Controller:
             for i in range(len(administrator_data)):
                 if administrator_data[i][0] == self.account:
                     self.show_gameScreen()
+                    return
             self.show_verify()
 
     # 显示验证窗口

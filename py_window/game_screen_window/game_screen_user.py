@@ -7,7 +7,7 @@ from database.database_root import Database_root
 from .game_screen_init import GameScreen_init
 
 
-# 使用界面窗口：初始化类
+# 使用界面窗口：用户管理类
 class GameScreen_user(GameScreen_init, QMainWindow):
     def __init__(self):
         super(GameScreen_user, self).__init__()
@@ -33,6 +33,8 @@ class GameScreen_user(GameScreen_init, QMainWindow):
     # 初始化表头和行列数
     def UsertableHeader_init(self):
         self.header_user = [""]  # 初始化列表头
+        self.saveList_user = []  # 数据存储列表(数据库中内容)
+        self.displayList_user = []  # 数据显示列表(表格中内容)
         # 设置表格有1行5列
         self.table.setColumnCount(3)  # 设置列数
         self.table.setRowCount(1)  # 设置行数
@@ -72,6 +74,8 @@ class GameScreen_user(GameScreen_init, QMainWindow):
             _2.setText(str(item[2]))
         else:
             _0.setText(self.lineEdit_num.text())
+            content = (self.lineEdit_num.text(), None, None)
+            self.displayList_user.append(content)
         self.table.setItem(num, 0, _0)
         self.table.setItem(num, 1, _1)
         self.table.setItem(num, 2, _2)
@@ -98,7 +102,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
             self.displayList_user[row - 1] = content
         else:
             print("最新行", content)
-            self.displayList_user.append(content)
+            self.displayList_user[row - 1] = content
 
     # 刷新表格函数
     def refresh_user(self):
@@ -118,7 +122,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         Id = row_select[0].row()
         if int(Id) <= len(self.displayList_user):
             print("删除一条数据")
-            self.displayList_user.pop()
+            self.displayList_user.pop(Id - 1)
         self.header_user.pop()
         self.table.removeRow(row_select[0].row())
         self.table.setVerticalHeaderLabels(self.header_user)
@@ -139,14 +143,14 @@ class GameScreen_user(GameScreen_init, QMainWindow):
             if item not in self.saveList_user:
                 print("存在修改数据")
                 if item[0] not in idList:
-                    self.database_user.insert("user_table1", [item[0], item[1], item[2]])
+                    self.User_database.insert("user_table1", [item[0], item[1], item[2]])
                     print("insert")
                 else:
-                    self.database_user.update("user_table1", [item[0], item[1], item[2]])
+                    self.User_database.update("user_table1", [item[0], item[1], item[2]])
                     print("update")
         for item in self.saveList_user:
             if item[0] not in _idList:
-                self.database_user.delete("user_table1", [item[0]])
+                self.User_database.delete("user_table1", [item[0]])
                 print("delete", item)
         self.saveList_user = copy(self.displayList_user)
 

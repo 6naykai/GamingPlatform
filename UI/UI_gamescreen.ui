@@ -539,7 +539,7 @@ background:url(:/image/image/xia.png) center no-repeat;}             </string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/icon.ico);</string>
+            <string notr="true">border-image: url(:/youxi/images/icon.ico);</string>
            </property>
            <property name="text">
             <string/>
@@ -707,7 +707,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/2048.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/2048.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -875,7 +875,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/FB.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/FB.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1043,7 +1043,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/FJ.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/FJ.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1211,7 +1211,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/PP.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/PP.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1379,7 +1379,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/TXZ.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/TXZ.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1547,7 +1547,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/maze.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/maze.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1715,7 +1715,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/tetris.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/tetris.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -1883,7 +1883,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/xxl.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/xxl.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -2051,7 +2051,7 @@ background-color: rgb(223, 223, 223);
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-image: url(:/icons/images/TCS.jpg);</string>
+            <string notr="true">border-image: url(:/youxi/images/TCS.jpg);</string>
            </property>
            <property name="text">
             <string/>
@@ -2912,10 +2912,10 @@ border:none;
    </widget>
    <zorder>label_6</zorder>
    <zorder>frame_2</zorder>
-   <zorder>widget_games</zorder>
    <zorder>widget_users</zorder>
    <zorder>widget_musics</zorder>
    <zorder>widget_quanxians</zorder>
+   <zorder>widget_games</zorder>
    <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">

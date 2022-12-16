@@ -5,7 +5,7 @@ from database.database_root import Database_root
 from .game_screen_init import GameScreen_init
 
 
-# 使用界面窗口：初始化类
+# 使用界面窗口：权限管理类
 class GameScreen_quanxian(GameScreen_init, QMainWindow):
     def __init__(self):
         super(GameScreen_quanxian, self).__init__()
