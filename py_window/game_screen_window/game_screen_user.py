@@ -1,7 +1,8 @@
 from copy import copy
-
+# 下面这个必须导入，因为exec中用到了
+from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QMainWindow
+from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QMainWindow, QHeaderView
 
 from database.database_root import Database_root
 from .game_screen_init import GameScreen_init
@@ -17,6 +18,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         self.header_user = [""]  # 列表头,用于显示数据对应的行序号
         self.saveList_user = []  # 数据存储列表(数据库中内容)
         self.displayList_user = []  # 数据显示列表(表格中内容)
+        self.comboBox_list = ["True", "False"]
         self.UsertableHeader_init()  # 初始化表头
         self.Userdata_init()  # 初始化数据
         # 连接信号
@@ -41,6 +43,10 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         self.table.setItem(0, 0, QTableWidgetItem("用户名"))
         self.table.setItem(0, 1, QTableWidgetItem("密码"))
         self.table.setItem(0, 2, QTableWidgetItem("封禁标志"))
+        # 隐藏列标题
+        self.table.horizontalHeader().setVisible(False)
+        # 设置表格头的伸缩模式，也就是让表格铺满整个QTableWidget控件
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
     # 初始化操作：即从数据库加载数据
     def Userdata_init(self):
@@ -68,20 +74,45 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         _0.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
         _1 = QTableWidgetItem("")
         _2 = QTableWidgetItem("")
+        # 设置选择框true/false,批量化生产子控件
+        exec('self.comboBox_fengjin{} = QtWidgets.QComboBox()'.format(num))
+        exec('self.comboBox_fengjin{}.addItems(self.comboBox_list)'.format(num))
+        exec('self.comboBox_fengjin{}.currentIndexChanged.connect(self._dataChanged_user)'.format(num))
+        # comboBox_fengjin = QtWidgets.QComboBox()
+        # comboBox_fengjin.addItems(self.comboBox_list)
+
         if item is not None:
             _0.setText(str(item[0]))
             _1.setText(str(item[1]))
             _2.setText(str(item[2]))
+            # 根据数据库内容设置选择框默认值
+            if str(item[2]) == "True":
+                exec('self.comboBox_fengjin{}.setCurrentIndex(0)'.format(num))
+                # exec('self.comboBox_fengjin{}.setStyleSheet("QComboBox{color:#ee0000}")'.format(num))
+                # comboBox_fengjin.setCurrentIndex(0)  # 设置默认值
+                # comboBox_fengjin.setStyleSheet("QComboBox{color:#ee0000}")  # 禁用则标红
+            else:
+                exec('self.comboBox_fengjin{}.setCurrentIndex(1)'.format(num))
+                # comboBox_fengjin.setCurrentIndex(1)
         else:
             _0.setText(self.lineEdit_num.text())
-            content = (self.lineEdit_num.text(), None, None)
+            exec('self.comboBox_fengjin{}.setCurrentIndex(1)'.format(num))
+            # comboBox_fengjin.setCurrentIndex(1)
+            content = (self.lineEdit_num.text(), None, False)
             self.displayList_user.append(content)
         self.table.setItem(num, 0, _0)
         self.table.setItem(num, 1, _1)
         self.table.setItem(num, 2, _2)
+        exec('self.table.setCellWidget(num, 2, self.comboBox_fengjin{})'.format(num))
+        # self.table.setItem(num, 2, comboBox_fengjin)
+        # self.table.setCellWidget(num, 2, comboBox_fengjin)
         self.header_user.append(str(num))
         self.table.setVerticalHeaderLabels(self.header_user)
         self.update()
+
+    # def _comboBoxChanged_user(self, row):
+    #     text = self.table.cellWidget(row, 2).currentText()
+    #     self.table.item(row, 2).setText(text)
 
     # 表格数据更改的函数
     def _dataChanged_user(self):
@@ -95,8 +126,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
             return
         row = row_select[0].row()
         content = (self.table.item(row, 0).text(), self.table.item(row, 1).text(),
-                   self.table.item(row, 2).text())
-
+                   self.table.cellWidget(row, 2).currentText())
         if row <= len(self.displayList_user):
             print("修改行", content)
             self.displayList_user[row - 1] = content
@@ -156,4 +186,5 @@ class GameScreen_user(GameScreen_init, QMainWindow):
 
     # 表格新增一行函数
     def add_user(self):
+        self.table.setCurrentItem(None)
         self.User_newLine(len(self.displayList_user) + 1)
