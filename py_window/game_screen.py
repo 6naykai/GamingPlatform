@@ -80,25 +80,17 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
     # 列表切换按钮：用于切换主界面的不同widget
     def onClickedListWidget(self, item):
         text = item.text()
+        self.widget_games.hide()
+        self.widget_users.hide()
+        self.widget_quanxians.hide()
+        self.widget_musics.hide()
         if text == "音乐":
-            self.widget_games.hide()
-            self.widget_users.hide()
-            self.widget_quanxians.hide()
             self.widget_musics.show()
         if text == "游戏":
-            self.widget_musics.hide()
-            self.widget_users.hide()
-            self.widget_quanxians.hide()
             self.widget_games.show()
         if text == "用户管理":
-            self.widget_musics.hide()
-            self.widget_quanxians.hide()
-            self.widget_games.hide()
             self.widget_users.show()
         if text == "权限管理":
-            self.widget_musics.hide()
-            self.widget_users.hide()
-            self.widget_games.hide()
             self.widget_quanxians.show()
         print(text)
         pass

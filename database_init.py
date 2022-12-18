@@ -128,6 +128,8 @@ GRANT UPDATE ON TABLE user_table to "AdministratorUser" WITH GRANT OPTION;
 GRANT INSERT ON TABLE user_table to "AdministratorUser" WITH GRANT OPTION;
 grant usage on schema gaussdb to "AdministratorUser";
 grant connect, create on database "GamingPlatform" to "AdministratorUser";
+grant delete, insert, select, update on user_table to "AdministratorUser";
+revoke insert, select, update on user_table from "AdministratorUser";
 """
 # commitRole_Administrator = """
 # comment on role AdministratorMusic is '音乐管理员';

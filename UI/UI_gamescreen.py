@@ -1403,8 +1403,8 @@ class Ui_MainWindow(object):
         self.label_8.setText(_translate("MainWindow", "用户名："))
         self.label_23.setText(_translate("MainWindow", "Rights management"))
         self.label_10.setText(_translate("MainWindow", "账户名："))
-        self.pushButton_add1.setText(_translate("MainWindow", "添加管理员"))
+        self.pushButton_add1.setText(_translate("MainWindow", "添加账户"))
         self.pushButton_refresh1.setText(_translate("MainWindow", "刷新数据"))
-        self.pushButton_delete1.setText(_translate("MainWindow", "删除管理员"))
+        self.pushButton_delete1.setText(_translate("MainWindow", "删除账户"))
         self.pushButton_save1.setText(_translate("MainWindow", "保存数据"))
 import resource_rc

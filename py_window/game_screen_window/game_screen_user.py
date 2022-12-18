@@ -18,7 +18,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         self.header_user = [""]  # 列表头,用于显示数据对应的行序号
         self.saveList_user = []  # 数据存储列表(数据库中内容)
         self.displayList_user = []  # 数据显示列表(表格中内容)
-        self.comboBox_list = ["True", "False"]
+        self.comboBox_list_user = ["True", "False"]
         self.UsertableHeader_init()  # 初始化表头
         self.Userdata_init()  # 初始化数据
         # 连接信号
@@ -40,9 +40,16 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         # 设置表格有1行5列
         self.table.setColumnCount(3)  # 设置列数
         self.table.setRowCount(1)  # 设置行数
-        self.table.setItem(0, 0, QTableWidgetItem("用户名"))
-        self.table.setItem(0, 1, QTableWidgetItem("密码"))
-        self.table.setItem(0, 2, QTableWidgetItem("封禁标志"))
+        # 设定“列标题”并将单元格设定为不可编辑
+        userName = QTableWidgetItem("用户名")
+        passWord = QTableWidgetItem("密码")
+        banFlag = QTableWidgetItem("封禁标志")
+        userName.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
+        passWord.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
+        banFlag.setFlags(Qt.ItemIsSelectable | Qt.ItemIsEnabled)
+        self.table.setItem(0, 0, userName)
+        self.table.setItem(0, 1, passWord)
+        self.table.setItem(0, 2, banFlag)
         # 隐藏列标题
         self.table.horizontalHeader().setVisible(False)
         # 设置表格头的伸缩模式，也就是让表格铺满整个QTableWidget控件
@@ -76,11 +83,10 @@ class GameScreen_user(GameScreen_init, QMainWindow):
         _2 = QTableWidgetItem("")
         # 设置选择框true/false,批量化生产子控件
         exec('self.comboBox_fengjin{} = QtWidgets.QComboBox()'.format(num))
-        exec('self.comboBox_fengjin{}.addItems(self.comboBox_list)'.format(num))
+        exec('self.comboBox_fengjin{}.addItems(self.comboBox_list_user)'.format(num))
         exec('self.comboBox_fengjin{}.currentIndexChanged.connect(self._dataChanged_user)'.format(num))
         # comboBox_fengjin = QtWidgets.QComboBox()
-        # comboBox_fengjin.addItems(self.comboBox_list)
-
+        # comboBox_fengjin.addItems(self.comboBox_list_user)
         if item is not None:
             _0.setText(str(item[0]))
             _1.setText(str(item[1]))
@@ -173,14 +179,14 @@ class GameScreen_user(GameScreen_init, QMainWindow):
             if item not in self.saveList_user:
                 print("存在修改数据")
                 if item[0] not in idList:
-                    self.User_database.insert("user_table1", [item[0], item[1], item[2]])
+                    self.User_database.insert("user_table", [item[0], item[1], item[2]])
                     print("insert")
                 else:
-                    self.User_database.update("user_table1", [item[0], item[1], item[2]])
+                    self.User_database.update("user_table", [item[0], "all", item[1], item[2]])
                     print("update")
         for item in self.saveList_user:
             if item[0] not in _idList:
-                self.User_database.delete("user_table1", [item[0]])
+                self.User_database.delete("user_table", [item[0], item[1], item[2]])
                 print("delete", item)
         self.saveList_user = copy(self.displayList_user)
 

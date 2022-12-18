@@ -6,10 +6,13 @@ class Database_root:
     def __init__(self):
         self.__ins_user = None
         self.__ins_user_remembered = None
-        # self.__upd_user = None
+        self.__ins_administrator = None
         self.__upd_user_forbidden = None
+        self.__upd_user_all = None
+        self.__upd_administrator = None
         self.__del_user = None
         self.__del_user_remembered = None
+        self.__del_administrator = None
         self.__sel_user = None
         self.__sel_user_remembered = None
         self.__sel_administrator = None
@@ -19,18 +22,22 @@ class Database_root:
     def sql_init(self):
         # 用户表sql语句初始化
         self.__ins_user = "insert into user_table (user_name,user_secret,user_forbidden) values ('{}','{}','{}');"
+        self.__upd_user_forbidden = "update user_table set user_forbidden='{}' where user_name='{}';"
+        self.__upd_user_all = "update user_table set user_secret='{}',user_forbidden='{}' where user_name='{}';"
+        self.__del_user = "delete from user_table where user_name='{}';"
+        self.__sel_user = "select * from user_table;"
+        # 记住用户表sql语句的初始化
         self.__ins_user_remembered = "insert into user_remembered (user_name,user_secret,is_remembered) values ('{}'," \
                                      "'{}','{}'); "
-        self.__upd_user_forbidden = "update user_table set user_forbidden='{}' where user_name='{}';"
-        self.__del_user = "delete from user_table where user_name='{}';"
         self.__del_user_remembered = "delete from user_remembered where user_name='{}';"
-        self.__sel_user = "select * from user_table;"
         self.__sel_user_remembered = "select * from user_remembered;"
+        # 管理员账户表sql语句的初始化
+        self.__ins_administrator = "insert into administrator_table(administrator_name, administrator_secret, " \
+                                   "administrator_type) values ('{}','{}','{}');"
         self.__sel_administrator = "select * from administrator_table;"
-
-        self.ins = "insert into user_table (user_name,user_secret,user_forbidden) values ('{}','{}','{}');"
-        self.upd = "update user_table set user_secret='{}',user_forbidden='{}' where user_name='{}';"
-        self.delete1 = "delete from user_table where user_name='{}'"
+        self.__upd_administrator = "update administrator_table set administrator_secret='{}',administrator_type='{}' " \
+                                   "where administrator_name='{}';"
+        self.__del_administrator = "delete from administrator_table where administrator_name='{}';"
 
     # 插入数据函数
     def insert(self, table_name, argv):
@@ -48,15 +55,18 @@ class Database_root:
             sql = self.__ins_user.format(user_name, user_secret, user_forbidden)
             ExecuSQL(sql)
         # 记住用户表的插入
-        elif table_name == "user_remembered":
+        if table_name == "user_remembered":
             user_name = argv[0]
             user_secret = argv[1]
             is_remembered = argv[2]
             sql = self.__ins_user_remembered.format(user_name, user_secret, is_remembered)
             ExecuSQL(sql)
-
-        if table_name == "user_table1":
-            sql = self.ins.format(argv[0],argv[1],argv[2])
+        # 管理员账户表的插入
+        if table_name == "administrator_table":
+            account_name = argv[0]
+            account_secret = argv[1]
+            account_type = argv[2]
+            sql = self.__ins_administrator.format(account_name, account_secret, account_type)
             ExecuSQL(sql)
         pass
 
@@ -68,19 +78,20 @@ class Database_root:
         :param argv: 数据列表
         :return: 无返回值
         """
-        # 用户表的删除
+        # 用户表的删除：根据用户名删除对应用户
         if table_name == "user_table":
             user_name = argv[0]
             sql = self.__del_user.format(user_name)
             ExecuSQL(sql)
-        # 记住用户表的删除
+        # 记住用户表的删除：删除记住用户表中记录内容
         if table_name == "user_remembered":
             user_name = argv[0]
             sql = self.__del_user_remembered.format(user_name)
             ExecuSQL(sql)
-
-        if table_name == "user_table1":
-            sql = self.delete1.format(argv[0])
+        # 管理员账户表的删除：根据管理员账户名删除对应账户
+        if table_name == "administrator_table":
+            account_name = argv[0]
+            sql = self.__del_administrator.format(account_name)
             ExecuSQL(sql)
         pass
 
@@ -101,9 +112,18 @@ class Database_root:
                 user_forbidden = argv[2]
                 sql = self.__upd_user_forbidden.format(user_forbidden, user_name)
                 ExecuSQL(sql)
-
-        if table_name == "user_table1":
-            sql = self.upd.format(argv[1],argv[2],argv[0])
+            # 更新用户全部信息
+            elif update_param == "all":
+                user_secret = argv[2]
+                user_forbidden = argv[3]
+                sql = self.__upd_user_all.format(user_secret, user_forbidden, user_name)
+                ExecuSQL(sql)
+        # 管理员账户表的更新
+        if table_name == "administrator_table":
+            account_name = argv[0]
+            account_secret = argv[1]
+            account_type = argv[2]
+            sql = self.__upd_administrator.format(account_secret, account_type, account_name)
             ExecuSQL(sql)
         pass
 

@@ -9,8 +9,10 @@ from database.database_permissionControl import ExecuSQL1, getData1
 class Database_user:
     def __init__(self):
         self.__sel_user = None
-        self.User = "gaussdb"
-        self.Password = "openGauss@2022"
+        # self.User = "gaussdb"
+        # self.Password = "openGauss@2022"
+        self.User = "AdministratorUser"
+        self.Password = "AdministratorUser@2022"
         # 设置会话路径
         search_path = """
         --设置当前会话的搜索路径为gaussdb模式、Public模式，

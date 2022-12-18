@@ -2847,7 +2847,7 @@ border:none;
       </rect>
      </property>
      <property name="text">
-      <string>添加管理员</string>
+      <string>添加账户</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_refresh1">
@@ -2873,7 +2873,7 @@ border:none;
       </rect>
      </property>
      <property name="text">
-      <string>删除管理员</string>
+      <string>删除账户</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_save1">
