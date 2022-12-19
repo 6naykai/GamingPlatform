@@ -191,5 +191,6 @@ if __name__ == '__main__':
     # a.delete("user_table", ["aa"])
     # a.select("user_table")
     # a.select("user_remembered")
-    a.insert("user_remembered", ["aa", "aa", True])
+    # a.insert("user_remembered", ["aa", "aa", True])
+    print(a.select("music_table"))
     # create_conn()

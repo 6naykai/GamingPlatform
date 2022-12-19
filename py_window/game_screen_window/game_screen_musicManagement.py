@@ -190,8 +190,6 @@ class GameScreen_musicManagement(GameScreen_init, QMainWindow):
         # rfind获取音乐相对路径
         music_path = file_path[file_path.rfind('/', 0, file_path.rfind('/') - 1) + 1:]
         print(music_path)
-        print(file_path.rfind('/') - 1)  # -2
-        print(file_path.rfind('/', 0, file_path.rfind('/') - 1))  # -1
         # 添加一行音乐
         content = (music_name, music_path, True)
         self.table_music.setCurrentItem(None)

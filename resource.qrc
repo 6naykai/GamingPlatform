@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/random_change.png</file>
     <file>icons/play_game.png</file>
     <file>icons/sound_off.png</file>
     <file>icons/sound_on.png</file>

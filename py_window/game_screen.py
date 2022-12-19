@@ -94,6 +94,7 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_musics_management.hide()
         self.widget_musics_download.hide()
         if text == "音乐":
+            self.music_init()
             self.widget_musics.show()
         if text == "游戏":
             self.widget_games.show()
