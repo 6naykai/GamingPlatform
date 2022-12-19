@@ -90,7 +90,7 @@ comment on column user_table.user_forbidden is '账号禁用标志';
 create unique index user_table_user_name_uindex
     on user_table (user_name);"""
 
-# 建表管理员表
+# 建表：管理员表
 createTable_AdministratorTable = """
 DROP TABLE IF EXISTS administrator_table;
 create table administrator_table
@@ -112,6 +112,34 @@ comment on column administrator_table.administrator_type is '管理员类型：m
 
 create unique index administrator_table_administrator_name_uindex
     on administrator_table (administrator_name);"""
+
+# 建表：音乐库表
+createTable_MusicTable = """
+DROP TABLE IF EXISTS music_table;
+create table music_table
+(
+    music_name   varchar          not null
+        constraint music_table_pk
+            primary key,
+    music_path   varchar          not null,
+    is_accretion int default TRUE not null
+);
+
+comment on table music_table is '音乐库表';
+
+comment on column music_table.music_name is '音乐名';
+
+comment on column music_table.music_path is '音乐路径';
+
+comment on column music_table.is_accretion is '是否添加入音乐库';
+
+create unique index music_table_music_name_uindex
+    on music_table (music_name);
+
+create unique index music_table_music_path_uindex
+    on music_table (music_path);
+alter table music_table
+    alter column is_accretion type boolean using is_accretion::boolean;"""
 
 # 创建AdministratorMusic,AdministratorGame,AdministratorUser管理员(数据库用户),并分配权限
 createUser_Administrator = """

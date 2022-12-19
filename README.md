@@ -53,10 +53,20 @@ Python 3.8
 ### 注册bug
 注册同名的用户、管理员报错
 ### ux设计缺陷
-键盘按回车能登陆，重写键盘事件
-
+1. 键盘按回车能登陆，重写键盘事件  
+2. 账户所有者更改自己密码
+3. 添加头像信息
+### 权限管理delete bug
+root可以删除自己
 
 ## 8 问题解决
 ### tablewidget中子控件信号不触发问题
 采用exec('self.{} = 1'.format(x))的方式批量化生产子控件  
 然后批量化绑定子控件信号触发表格数据更改的函数
+### 继承的二义性问题解决
+参考链接如下：
+https://blog.csdn.net/wenpy/article/details/98599991
+### 正则表达式取路径问题
+参考链接如下：
+https://blog.csdn.net/aoyixi3993/article/details/102246305
+https://blog.csdn.net/u011909077/article/details/88383809

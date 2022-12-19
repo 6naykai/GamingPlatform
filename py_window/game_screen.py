@@ -2,12 +2,12 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QMouseEvent
 from database.database_root import Database_root
-from database.database_user import Database_user
-from .game_screen_window import GameScreen_game, GameScreen_music, GameScreen_user, GameScreen_quanxian
+from .game_screen_window import GameScreen_game, GameScreen_music, GameScreen_user, GameScreen_quanxian, \
+    GameScreen_musicManagement
 
 
 # 使用界面窗口
-class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_quanxian):
+class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_quanxian, GameScreen_musicManagement):
 
     # 窗口切换信号
     switch_window = QtCore.pyqtSignal()
@@ -35,12 +35,16 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
     def account_permission(self):
         self.listWidget.clear()
         user_list = ["音乐", "游戏"]
-        useradmin_list = ["音乐", "游戏", "用户管理"]
-        root_list = ["音乐", "游戏", "用户管理", "权限管理"]
+        user_admin_list = ["音乐", "游戏", "用户管理"]
+        music_admin_list = ["音乐", "游戏", "音乐管理", "音乐下载"]
+        game_admin_list = ["音乐", "游戏", "游戏管理"]
+        root_list = ["音乐", "游戏", "音乐管理", "音乐下载", "游戏管理", "用户管理", "权限管理"]
         if self.user_permission == "普通用户":
             self.listWidget.addItems(user_list)
         elif self.user_permission == "用户管理员":
-            self.listWidget.addItems(useradmin_list)
+            self.listWidget.addItems(user_admin_list)
+        elif self.user_permission == "音乐管理员":
+            self.listWidget.addItems(music_admin_list)
         else:
             self.listWidget.addItems(root_list)
 
@@ -71,6 +75,7 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_musics.hide()
         self.widget_users.hide()
         self.widget_quanxians.hide()
+        self.widget_musics_management.hide()
 
     # 连接按钮和对应的函数
     def connecter(self):
@@ -84,6 +89,7 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_users.hide()
         self.widget_quanxians.hide()
         self.widget_musics.hide()
+        self.widget_musics_management.hide()
         if text == "音乐":
             self.widget_musics.show()
         if text == "游戏":
@@ -92,6 +98,8 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
             self.widget_users.show()
         if text == "权限管理":
             self.widget_quanxians.show()
+        if text == "音乐管理":
+            self.widget_musics_management.show()
         print(text)
         pass
 

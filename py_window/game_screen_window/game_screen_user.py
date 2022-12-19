@@ -186,7 +186,7 @@ class GameScreen_user(GameScreen_init, QMainWindow):
                     print("update")
         for item in self.saveList_user:
             if item[0] not in _idList:
-                self.User_database.delete("user_table", [item[0], item[1], item[2]])
+                self.User_database.delete("user_table", [item[0]])
                 print("delete", item)
         self.saveList_user = copy(self.displayList_user)
 
