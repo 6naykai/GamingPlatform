@@ -3,11 +3,12 @@ from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QMouseEvent
 from database.database_root import Database_root
 from .game_screen_window import GameScreen_game, GameScreen_music, GameScreen_user, GameScreen_quanxian, \
-    GameScreen_musicManagement
+    GameScreen_musicManagement, GameScreen_musicDownload
 
 
 # 使用界面窗口
-class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_quanxian, GameScreen_musicManagement):
+class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_quanxian,
+                 GameScreen_musicManagement, GameScreen_musicDownload):
 
     # 窗口切换信号
     switch_window = QtCore.pyqtSignal()
@@ -76,6 +77,7 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_users.hide()
         self.widget_quanxians.hide()
         self.widget_musics_management.hide()
+        self.widget_musics_download.hide()
 
     # 连接按钮和对应的函数
     def connecter(self):
@@ -90,6 +92,7 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_quanxians.hide()
         self.widget_musics.hide()
         self.widget_musics_management.hide()
+        self.widget_musics_download.hide()
         if text == "音乐":
             self.widget_musics.show()
         if text == "游戏":
@@ -100,6 +103,8 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
             self.widget_quanxians.show()
         if text == "音乐管理":
             self.widget_musics_management.show()
+        if text == "音乐下载":
+            self.widget_musics_download.show()
         print(text)
         pass
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1165</width>
-    <height>820</height>
+    <width>1167</width>
+    <height>823</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -3060,6 +3060,167 @@ border:none;
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="widget_musics_download" native="true">
+    <property name="geometry">
+     <rect>
+      <x>219</x>
+      <y>0</y>
+      <width>945</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">widget{
+border:none;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <widget class="QFrame" name="frame_music_download">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>0</y>
+       <width>940</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame{
+	background-color: rgba(255, 255, 255, 0);
+	border-radius:20px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_music_download">
+      <property name="geometry">
+       <rect>
+        <x>321</x>
+        <y>10</y>
+        <width>280</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(22, 54, 53)</string>
+      </property>
+      <property name="text">
+       <string>Music download</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>885</x>
+        <y>10</y>
+        <width>42</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/icons/image/close.png</normaloff>:/icons/image/close.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_music_download">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>730</y>
+       <width>92</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>下载</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_music_search">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>100</y>
+       <width>92</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>搜索</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_music_search">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>90</y>
+       <width>271</width>
+       <height>41</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>201</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>请输入歌手名或歌曲名：</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_music_download">
+     <property name="geometry">
+      <rect>
+       <x>47</x>
+       <y>150</y>
+       <width>842</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>歌手</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>歌曲</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>专辑</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
    <zorder>label_6</zorder>
    <zorder>frame_2</zorder>
    <zorder>widget_users</zorder>
@@ -3067,6 +3228,7 @@ border:none;
    <zorder>widget_quanxians</zorder>
    <zorder>widget_games</zorder>
    <zorder>widget_musics_management</zorder>
+   <zorder>widget_musics_download</zorder>
    <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -3074,7 +3236,7 @@ border:none;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1165</width>
+     <width>1167</width>
      <height>26</height>
     </rect>
    </property>
