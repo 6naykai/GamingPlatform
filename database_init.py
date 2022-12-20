@@ -141,6 +141,32 @@ create unique index music_table_music_path_uindex
 alter table music_table
     alter column is_accretion type boolean using is_accretion::boolean;"""
 
+# 建表：游戏库表
+createTable_GameTable = """
+DROP TABLE IF EXISTS game_table;
+create table game_table
+(
+    game_name varchar              not null
+        constraint game_table_pk
+            primary key,
+    game_path varchar              not null,
+    is_added  boolean default TRUE not null
+);
+
+comment on table game_table is '游戏表';
+
+comment on column game_table.game_name is '游戏名';
+
+comment on column game_table.game_path is '游戏路径';
+
+comment on column game_table.is_added is '是否添加入库';
+
+create unique index game_table_game_name_uindex
+    on game_table (game_name);
+
+create unique index game_table_game_path_uindex
+    on game_table (game_path);"""
+
 # 创建AdministratorMusic,AdministratorGame,AdministratorUser管理员(数据库用户),并分配权限
 createUser_Administrator = """
 DROP USER IF EXISTS "AdministratorMusic" CASCADE;
@@ -168,5 +194,5 @@ revoke insert, select, update on user_table from "AdministratorUser";
 
 
 ExecuSQL(schema_create + search_path +
-         createTable_UserRemembered + createTable_UserTable + createTable_AdministratorTable +
-         createUser_Administrator)
+         createTable_UserRemembered + createTable_UserTable + createTable_AdministratorTable + createTable_MusicTable +
+         createTable_GameTable + createUser_Administrator)

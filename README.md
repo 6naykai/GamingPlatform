@@ -73,3 +73,13 @@ https://blog.csdn.net/wenpy/article/details/98599991
 参考链接如下：
 https://blog.csdn.net/aoyixi3993/article/details/102246305
 https://blog.csdn.net/u011909077/article/details/88383809
+### 游戏线程问题
+**问题描述**：在关闭子游戏时平台也会被关闭  
+**解决方式1(不采用)**：  
+利用pyqt信号解决，开启新线程维持pygame窗口  
+**解决方式2(采用)**：  
+通过windows操作系统解决，游戏打包成exe文件，
+利用os包中的startfile通过操作系统开启新线程
+### 运行exe文件相对路径问题
+参考链接：  
+https://blog.csdn.net/qq_21516003/article/details/116403312

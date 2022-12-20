@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1167</width>
+    <width>1164</width>
     <height>823</height>
    </rect>
   </property>
@@ -259,6 +259,32 @@ border-left: 2px solid rgb(90, 216, 212)
       <property name="styleSheet">
        <string notr="true">image: url(:/svg/Morikawa/01_Data/img/image/image.png);</string>
       </property>
+      <widget class="QPushButton" name="pushButton_backToStart">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>15</y>
+         <width>40</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 230, 236);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../resource.qrc">
+         <normaloff>:/icons/icons/退出.png</normaloff>:/icons/icons/退出.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>35</width>
+         <height>35</height>
+        </size>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
@@ -496,7 +522,7 @@ background:url(:/image/image/xia.png) center no-repeat;}             </string>
         <number>36</number>
        </property>
        <item>
-        <widget class="QWidget" name="widget_20" native="true">
+        <widget class="QWidget" name="widget_wuziqi" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -664,7 +690,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_38" native="true">
+        <widget class="QWidget" name="widget_2048" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -832,7 +858,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_40" native="true">
+        <widget class="QWidget" name="widget_niao" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1000,7 +1026,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_42" native="true">
+        <widget class="QWidget" name="widget_feiji" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1168,7 +1194,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_44" native="true">
+        <widget class="QWidget" name="widget_pingpang" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1336,7 +1362,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_46" native="true">
+        <widget class="QWidget" name="widget_tuixiangzi" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1504,7 +1530,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_48" native="true">
+        <widget class="QWidget" name="widget_zoumigong" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1672,7 +1698,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_54" native="true">
+        <widget class="QWidget" name="widget_eluosi" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1840,7 +1866,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_52" native="true">
+        <widget class="QWidget" name="widget_xiaoxiaole" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2008,7 +2034,7 @@ background-color: rgb(223, 223, 223);
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="widget_50" native="true">
+        <widget class="QWidget" name="widget_tanchishe" native="true">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -2689,10 +2715,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>添加用户</string>
@@ -2702,10 +2744,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>删除用户</string>
@@ -2715,10 +2773,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>620</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>刷新数据</string>
@@ -2728,10 +2802,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>保存数据</string>
@@ -2888,10 +2978,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>310</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>添加账户</string>
@@ -2901,10 +3007,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>620</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>81</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>刷新数据</string>
@@ -2914,10 +3036,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>470</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>删除账户</string>
@@ -2927,10 +3065,26 @@ border:none;
      <property name="geometry">
       <rect>
        <x>760</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>保存数据</string>
@@ -2956,6 +3110,251 @@ border:none;
      <iconset resource="../resource.qrc">
       <normaloff>:/icons/icons/close.png</normaloff>:/icons/icons/close.png</iconset>
     </property>
+   </widget>
+   <widget class="QWidget" name="widget_musics_download" native="true">
+    <property name="geometry">
+     <rect>
+      <x>219</x>
+      <y>0</y>
+      <width>945</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">widget{
+border:none;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <widget class="QFrame" name="frame_music_download">
+     <property name="geometry">
+      <rect>
+       <x>1</x>
+       <y>0</y>
+       <width>940</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QFrame{
+	background-color: rgba(255, 255, 255, 0);
+	border-radius:20px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_music_download">
+      <property name="geometry">
+       <rect>
+        <x>304</x>
+        <y>30</y>
+        <width>280</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(22, 54, 53)</string>
+      </property>
+      <property name="text">
+       <string>Music download</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>885</x>
+        <y>10</y>
+        <width>42</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/icons/image/close.png</normaloff>:/icons/image/close.png</iconset>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_music_download">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>715</y>
+       <width>103</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>下载</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_music_search">
+     <property name="geometry">
+      <rect>
+       <x>289</x>
+       <y>90</y>
+       <width>404</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{
+	background-color: rgb(255, 255, 255)
+border:0px solid red;
+border-radius:14px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableWidget_music_download">
+     <property name="geometry">
+      <rect>
+       <x>47</x>
+       <y>150</y>
+       <width>842</width>
+       <height>561</height>
+      </rect>
+     </property>
+     <row>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>歌手</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>歌曲</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>专辑</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QFrame" name="frame_7">
+     <property name="geometry">
+      <rect>
+       <x>43</x>
+       <y>90</y>
+       <width>242</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+	background-color: rgb(89, 217, 212);
+	border-radius:20px;color: rgb(255, 255, 255);
+}
+
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <item>
+       <widget class="QLabel" name="label_musicDownload">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>12</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>请输入歌曲名或歌手名：</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="pushButton_music_search">
+     <property name="geometry">
+      <rect>
+       <x>709</x>
+       <y>90</y>
+       <width>110</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>搜索</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="widget_musics_management" native="true">
     <property name="geometry">
@@ -3016,6 +3415,9 @@ border:none;
       <property name="text">
        <string>Music management</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_5">
       <property name="geometry">
@@ -3038,30 +3440,42 @@ border:none;
       </property>
      </widget>
     </widget>
-    <widget class="QTableWidget" name="table_music">
-     <property name="geometry">
-      <rect>
-       <x>47</x>
-       <y>150</y>
-       <width>842</width>
-       <height>561</height>
-      </rect>
-     </property>
-     <property name="rowCount">
-      <number>0</number>
-     </property>
-     <property name="columnCount">
-      <number>0</number>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_add_music">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <x>119</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>添加音乐</string>
@@ -3070,11 +3484,39 @@ border:none;
     <widget class="QPushButton" name="pushButton_delete_music">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <x>327</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>删除音乐</string>
@@ -3083,31 +3525,97 @@ border:none;
     <widget class="QPushButton" name="pushButton_refresh_music">
      <property name="geometry">
       <rect>
-       <x>550</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <x>535</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
      <property name="text">
-      <string>刷新数据</string>
+      <string>刷新音乐</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_save_music">
      <property name="geometry">
       <rect>
-       <x>720</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
+       <x>743</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
      </property>
      <property name="text">
       <string>保存数据</string>
      </property>
     </widget>
+    <widget class="QTableWidget" name="table_music">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
+       <y>150</y>
+       <width>842</width>
+       <height>561</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QWidget" name="widget_musics_download" native="true">
+   <widget class="QWidget" name="widget_games_management" native="true">
     <property name="geometry">
      <rect>
       <x>219</x>
@@ -3122,7 +3630,7 @@ border:none;
 	background-color: rgba(255, 255, 255, 0);
 }</string>
     </property>
-    <widget class="QFrame" name="frame_music_download">
+    <widget class="QFrame" name="frame_game_manage">
      <property name="geometry">
       <rect>
        <x>1</x>
@@ -3143,7 +3651,7 @@ border:none;
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label_music_download">
+     <widget class="QLabel" name="label_game_manage">
       <property name="geometry">
        <rect>
         <x>321</x>
@@ -3164,10 +3672,13 @@ border:none;
        <string notr="true">color: rgb(22, 54, 53)</string>
       </property>
       <property name="text">
-       <string>Music download</string>
+       <string>Game management</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="pushButton_7">
       <property name="geometry">
        <rect>
         <x>885</x>
@@ -3188,94 +3699,190 @@ border:none;
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="pushButton_music_download">
+    <widget class="QPushButton" name="pushButton_add_game">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>730</y>
-       <width>92</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>下载</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_music_search">
-     <property name="geometry">
-      <rect>
-       <x>610</x>
-       <y>100</y>
-       <width>92</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>搜索</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_music_search">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>90</y>
-       <width>271</width>
-       <height>41</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>100</x>
+       <x>119</x>
        <y>80</y>
-       <width>201</width>
-       <height>51</height>
+       <width>103</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
      <property name="text">
-      <string>请输入歌手名或歌曲名：</string>
+      <string>添加游戏</string>
      </property>
     </widget>
-    <widget class="QTableWidget" name="tableWidget_music_download">
+    <widget class="QPushButton" name="pushButton_delete_game">
      <property name="geometry">
       <rect>
-       <x>47</x>
+       <x>327</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>删除游戏</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_refresh_game">
+     <property name="geometry">
+      <rect>
+       <x>535</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>刷新游戏</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save_game">
+     <property name="geometry">
+      <rect>
+       <x>743</x>
+       <y>80</y>
+       <width>103</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>11</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton
+{
+    background-color:rgb(214, 244, 249);
+border-radius:20px;
+}
+
+QPushButton:pressed
+{
+    background-color:rgb(103, 216, 217);
+    padding-left:3px;
+    padding-top:3px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>保存数据</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="table_game">
+     <property name="geometry">
+      <rect>
+       <x>41</x>
        <y>150</y>
        <width>842</width>
        <height>561</height>
       </rect>
      </property>
-     <row>
-      <property name="text">
-       <string>1</string>
-      </property>
-     </row>
-     <column>
-      <property name="text">
-       <string>歌手</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>歌曲</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>专辑</string>
-      </property>
-     </column>
     </widget>
    </widget>
    <zorder>label_6</zorder>
    <zorder>frame_2</zorder>
    <zorder>widget_users</zorder>
    <zorder>widget_quanxians</zorder>
-   <zorder>widget_games</zorder>
-   <zorder>widget_musics_management</zorder>
-   <zorder>widget_musics_download</zorder>
    <zorder>widget_musics</zorder>
+   <zorder>widget_musics_download</zorder>
+   <zorder>widget_musics_management</zorder>
+   <zorder>widget_games</zorder>
+   <zorder>widget_games_management</zorder>
    <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -3283,7 +3890,7 @@ border:none;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1167</width>
+     <width>1164</width>
      <height>26</height>
     </rect>
    </property>

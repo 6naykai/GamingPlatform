@@ -13,9 +13,9 @@ import datetime,time
 from copy import copy
 
 
-ins = "insert into game_table(start_time, game_type, winner) values ('{}','{}','{}');"
-upd = "update game_table set winner='{}' where start_time='{}';"
-sel = "select * from game_table"
+ins = "insert into gobang_game_table(start_time, game_type, winner) values ('{}','{}','{}');"
+upd = "update gobang_game_table set winner='{}' where start_time='{}';"
+sel = "select * from gobang_game_table"
 
 
 # 系统管理员数据库连接接口
@@ -81,7 +81,7 @@ class Example(QWidget):
         初始化操作
         即从数据库加载数据
         """
-        argv = "select * from game_table"
+        argv = "select * from gobang_game_table"
         data = getData(argv)
         print("初始化")
         for index, item in enumerate(data):

@@ -119,6 +119,8 @@ class GameScreen_musicDownload(GameScreen_init, QMainWindow):
         :return:
         """
         row_select = self.tableWidget_music_download.selectedItems()
+        if len(row_select) == 0:
+            return
         self.song_num = row_select[0].row() + 1
         print(self.song_num)
         # 获取下载歌曲的地址

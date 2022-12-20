@@ -8,18 +8,22 @@ class Database_root:
         self.__ins_user_remembered = None
         self.__ins_administrator = None
         self.__ins_music = None
+        self.__ins_game = None
         self.__upd_user_forbidden = None
         self.__upd_user_all = None
         self.__upd_administrator = None
         self.__upd_music = None
+        self.__upd_game = None
         self.__del_user = None
         self.__del_user_remembered = None
         self.__del_administrator = None
         self.__del_music = None
+        self.__del_game = None
         self.__sel_user = None
         self.__sel_user_remembered = None
         self.__sel_administrator = None
         self.__sel_music = None
+        self.__sel_game = None
         self.sql_init()
 
     # sql语句初始化
@@ -47,6 +51,11 @@ class Database_root:
         self.__del_music = "delete from music_table where music_name='{}';"
         self.__upd_music = "update music_table set music_path='{}',is_accretion='{}' where music_name='{}';"
         self.__sel_music = "select * from music_table;"
+        # 游戏库表sql语言的初始化
+        self.__ins_game = "insert into game_table(game_name, game_path) VALUES ('{}','{}');"
+        self.__del_game = "delete from game_table where game_name='{}';"
+        self.__upd_game = "update game_table set game_path='{}',is_added='{}' where game_name='{}';"
+        self.__sel_game = "select * from game_table;"
 
     # 插入数据函数
     def insert(self, table_name, argv):
@@ -83,6 +92,12 @@ class Database_root:
             music_path = argv[1]
             sql = self.__ins_music.format(music_name, music_path)
             ExecuSQL(sql)
+        # 游戏库表的插入
+        if table_name == "game_table":
+            game_name = argv[0]
+            game_path = argv[1]
+            sql = self.__ins_game.format(game_name, game_path)
+            ExecuSQL(sql)
         pass
 
     # 删除数据函数
@@ -112,6 +127,11 @@ class Database_root:
         if table_name == "music_table":
             music_name = argv[0]
             sql = self.__del_music.format(music_name)
+            ExecuSQL(sql)
+        # 游戏库表的删除
+        if table_name == "game_table":
+            game_name = argv[0]
+            sql = self.__del_game.format(game_name)
             ExecuSQL(sql)
         pass
 
@@ -152,6 +172,13 @@ class Database_root:
             is_accretion = argv[2]
             sql = self.__upd_music.format(music_path, is_accretion, music_name)
             ExecuSQL(sql)
+        # 游戏库表的更新
+        if table_name == "game_table":
+            game_name = argv[0]
+            game_path = argv[1]
+            is_added = argv[2]
+            sql = self.__upd_game.format(game_path, is_added, game_name)
+            ExecuSQL(sql)
         pass
 
     # 查询数据函数
@@ -179,6 +206,11 @@ class Database_root:
         # 音乐库表的查询
         if table_name == "music_table":
             sql = self.__sel_music
+            data = getData(sql)
+            return data
+        # 游戏库表的查询
+        if table_name == "game_table":
+            sql = self.__sel_game
             data = getData(sql)
             return data
         pass

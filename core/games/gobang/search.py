@@ -6,7 +6,7 @@ from copy import copy
 import sys
 from database_interface import ExecuSQL, getData
 
-sel = "select * from game_table"
+sel = "select * from gobang_game_table"
 
 
 class Example(QWidget):
@@ -67,7 +67,7 @@ class Example(QWidget):
         初始化操作
         即从数据库加载数据
         """
-        argv = "select * from game_table"
+        argv = "select * from gobang_game_table"
         data = getData(argv)
         print("初始化")
         for index, item in enumerate(data):

@@ -74,42 +74,73 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 
 
-class MyWindow(QtWidgets.QWidget):
-    def __init__(self):
-        super(MyWindow, self).__init__()
-        self.resize(900, 600)
-        self.myButton = QtWidgets.QPushButton(self)
-        self.myButton.setObjectName("myButton")
-        self.myButton.setText("click")
-        self.myButton.clicked.connect(self.msg)
+# class MyWindow(QtWidgets.QWidget):
+#     def __init__(self):
+#         super(MyWindow, self).__init__()
+#         self.resize(900, 600)
+#         self.myButton = QtWidgets.QPushButton(self)
+#         self.myButton.setObjectName("myButton")
+#         self.myButton.setText("click")
+#         self.myButton.clicked.connect(self.msg)
+#
+#     def msg(self):
+#         # directory1 = QFileDialog.getExistingDirectory(self,"选取文件夹","./")   #起始路径
+#         # print(directory1)
+#
+#         # fileName1, filetype = QFileDialog.getOpenFileName(self, "选取文件", "./",
+#         #                                                   "All Files (*);;Excel Files (*.mp3)")  # 设置文件扩展名过滤,注意用双分号间隔
+#         # print(fileName1, filetype)
+#
+#         # files, ok1 = QFileDialog.getOpenFileNames(self,"多文件选择", "./", "All Files (*);;Text Files (*.txt)")
+#         # print(files)
+#         files = QFileDialog.getOpenFileName(self, "请选择要添加的文件", "musics", "All Files (*)")
+#         print(files)
+#         music_name = re.findall(r'(.+?)\.mp3', re.findall(r'[^\\/:*?"<>|\r\n]+$',files[0])[0])[0]
+#         print(music_name)
+#         music_path = files[0]
+#         # end_pos = music_path.rfind('/') - 1  # 倒数第一个"/"的位置再左移一位
+#         # start_pos = music_path.rfind('/', 0, end_pos)  # 网址从开始截至到end_pos的位置，从右往左出现的第一个"/"也就是我们要找的倒数第二个"/"
+#         # filename = music_path[start_pos + 1:]  # 截取网址的倒数第二个 "/" 后面的内容
+#         filename = music_path[music_path.rfind('/', 0, music_path.rfind('/') - 1) + 1:]
+#         print(filename)
+#         # fileName2, ok2 = QFileDialog.getSaveFileName(self,"文件保存", "./","All Files (*);;Text Files (*.txt)")
+#
+#
+# if __name__ == "__main__":
+#     import sys
+#
+#     app = QtWidgets.QApplication(sys.argv)
+#     myshow = MyWindow()
+#     myshow.show()
+#     sys.exit(app.exec_())
 
-    def msg(self):
-        # directory1 = QFileDialog.getExistingDirectory(self,"选取文件夹","./")   #起始路径
-        # print(directory1)
 
-        # fileName1, filetype = QFileDialog.getOpenFileName(self, "选取文件", "./",
-        #                                                   "All Files (*);;Excel Files (*.mp3)")  # 设置文件扩展名过滤,注意用双分号间隔
-        # print(fileName1, filetype)
-
-        # files, ok1 = QFileDialog.getOpenFileNames(self,"多文件选择", "./", "All Files (*);;Text Files (*.txt)")
-        # print(files)
-        files = QFileDialog.getOpenFileName(self, "请选择要添加的文件", "musics", "All Files (*)")
-        print(files)
-        music_name = re.findall(r'(.+?)\.mp3', re.findall(r'[^\\/:*?"<>|\r\n]+$',files[0])[0])[0]
-        print(music_name)
-        music_path = files[0]
-        # end_pos = music_path.rfind('/') - 1  # 倒数第一个"/"的位置再左移一位
-        # start_pos = music_path.rfind('/', 0, end_pos)  # 网址从开始截至到end_pos的位置，从右往左出现的第一个"/"也就是我们要找的倒数第二个"/"
-        # filename = music_path[start_pos + 1:]  # 截取网址的倒数第二个 "/" 后面的内容
-        filename = music_path[music_path.rfind('/', 0, music_path.rfind('/') - 1) + 1:]
-        print(filename)
-        # fileName2, ok2 = QFileDialog.getSaveFileName(self,"文件保存", "./","All Files (*);;Text Files (*.txt)")
+# -*- coding:utf-8 -*-
+import sys
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton
+from ProjectPath import projectPath
 
 
-if __name__ == "__main__":
-    import sys
+class MainWindow(QMainWindow):
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
+        self.resize(600, 300)
+        self.setWindowTitle('创建按钮和按钮点击事件的例子')
 
-    app = QtWidgets.QApplication(sys.argv)
-    myshow = MyWindow()
-    myshow.show()
+        self.button1 = QPushButton('按键1', self)
+        self.button1.clicked.connect(self.clickButton)
+
+    def clickButton(self):
+        sender = self.sender()
+        import os
+        os.startfile(projectPath + r"/games/我的计算器.exe")
+        # os.startfile(r"E:\workspace\software_course\homework_2.2\GamingPlatform\games/我的计算器.exe")
+        print(sender.text() + '被点击')
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    main = MainWindow()
+    main.show()
     sys.exit(app.exec_())
+

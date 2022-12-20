@@ -1,14 +1,16 @@
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt, QPoint
 from PyQt5.QtGui import QMouseEvent
+from PyQt5.QtWidgets import QMessageBox
+
 from database.database_root import Database_root
 from .game_screen_window import GameScreen_game, GameScreen_music, GameScreen_user, GameScreen_quanxian, \
-    GameScreen_musicManagement, GameScreen_musicDownload
+    GameScreen_musicManagement, GameScreen_musicDownload, GameScreen_gameManagement
 
 
 # 使用界面窗口
 class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_quanxian,
-                 GameScreen_musicManagement, GameScreen_musicDownload):
+                 GameScreen_musicManagement, GameScreen_musicDownload, GameScreen_gameManagement):
 
     # 窗口切换信号
     switch_window = QtCore.pyqtSignal()
@@ -46,6 +48,8 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
             self.listWidget.addItems(user_admin_list)
         elif self.user_permission == "音乐管理员":
             self.listWidget.addItems(music_admin_list)
+        elif self.user_permission == "游戏管理员":
+            self.listWidget.addItems(game_admin_list)
         else:
             self.listWidget.addItems(root_list)
 
@@ -78,10 +82,12 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_quanxians.hide()
         self.widget_musics_management.hide()
         self.widget_musics_download.hide()
+        self.widget_games_management.hide()
 
     # 连接按钮和对应的函数
     def connecter(self):
         self.listWidget.itemClicked.connect(self.onClickedListWidget)
+        self.pushButton_backToStart.clicked.connect(self.back)
         pass
 
     # 列表切换按钮：用于切换主界面的不同widget
@@ -93,10 +99,12 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
         self.widget_musics.hide()
         self.widget_musics_management.hide()
         self.widget_musics_download.hide()
+        self.widget_games_management.hide()
         if text == "音乐":
             self.music_init()
             self.widget_musics.show()
         if text == "游戏":
+            self.gameWidget_init()
             self.widget_games.show()
         if text == "用户管理":
             self.widget_users.show()
@@ -106,8 +114,19 @@ class GameScreen(GameScreen_music, GameScreen_game, GameScreen_user, GameScreen_
             self.widget_musics_management.show()
         if text == "音乐下载":
             self.widget_musics_download.show()
+        if text == "游戏管理":
+            self.widget_games_management.show()
         print(text)
         pass
+
+    # 返回登陆页面按钮
+    def back(self):
+        reply = QMessageBox.question(self, '提示', '确认退出？', QMessageBox.Yes, QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            # 接收到确认关闭信号之后回到登陆页面
+            self.switch_window.emit()
+        else:
+            pass
 
     # 重写移动事件——用控件拖重写鼠标事件
     # 重写鼠标移动事件

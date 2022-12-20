@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1167, 823)
+        MainWindow.resize(1164, 823)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
@@ -133,6 +133,15 @@ class Ui_MainWindow(object):
         self.widget_2.setGeometry(QtCore.QRect(131, 11, 51, 71))
         self.widget_2.setStyleSheet("image: url(:/svg/Morikawa/01_Data/img/image/image.png);")
         self.widget_2.setObjectName("widget_2")
+        self.pushButton_backToStart = QtWidgets.QPushButton(self.widget_2)
+        self.pushButton_backToStart.setGeometry(QtCore.QRect(5, 15, 40, 40))
+        self.pushButton_backToStart.setStyleSheet("background-color: rgb(170, 230, 236);")
+        self.pushButton_backToStart.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icons/icons/退出.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_backToStart.setIcon(icon4)
+        self.pushButton_backToStart.setIconSize(QtCore.QSize(35, 35))
+        self.pushButton_backToStart.setObjectName("pushButton_backToStart")
         self.layoutWidget = QtWidgets.QWidget(self.frame_6)
         self.layoutWidget.setGeometry(QtCore.QRect(0, 0, 122, 83))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -244,17 +253,17 @@ class Ui_MainWindow(object):
         self.verticalLayout_15.setContentsMargins(36, 36, 124, 36)
         self.verticalLayout_15.setSpacing(24)
         self.verticalLayout_15.setObjectName("verticalLayout_15")
-        self.widget_20 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_20.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_20.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_20.setStyleSheet(".QWidget{\n"
+        self.widget_wuziqi = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_wuziqi.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_wuziqi.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_wuziqi.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_20.setObjectName("widget_20")
-        self.widget_21 = QtWidgets.QWidget(self.widget_20)
+        self.widget_wuziqi.setObjectName("widget_wuziqi")
+        self.widget_21 = QtWidgets.QWidget(self.widget_wuziqi)
         self.widget_21.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_21.setStyleSheet("")
         self.widget_21.setObjectName("widget_21")
@@ -263,12 +272,12 @@ class Ui_MainWindow(object):
         self.label_7.setStyleSheet("border-image: url(:/youxi/images/icon.ico);")
         self.label_7.setText("")
         self.label_7.setObjectName("label_7")
-        self.pushButton_game_wuziqi = QtWidgets.QPushButton(self.widget_20)
+        self.pushButton_game_wuziqi = QtWidgets.QPushButton(self.widget_wuziqi)
         self.pushButton_game_wuziqi.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_wuziqi.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_wuziqi.setText("")
         self.pushButton_game_wuziqi.setObjectName("pushButton_game_wuziqi")
-        self.layoutWidget1 = QtWidgets.QWidget(self.widget_20)
+        self.layoutWidget1 = QtWidgets.QWidget(self.widget_wuziqi)
         self.layoutWidget1.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget1)
@@ -323,18 +332,18 @@ class Ui_MainWindow(object):
         self.label_37.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_37.setObjectName("label_37")
         self.horizontalLayout.addWidget(self.label_37)
-        self.verticalLayout_15.addWidget(self.widget_20)
-        self.widget_38 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_38.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_38.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_38.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_wuziqi)
+        self.widget_2048 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_2048.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_2048.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_2048.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_38.setObjectName("widget_38")
-        self.widget_39 = QtWidgets.QWidget(self.widget_38)
+        self.widget_2048.setObjectName("widget_2048")
+        self.widget_39 = QtWidgets.QWidget(self.widget_2048)
         self.widget_39.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_39.setStyleSheet("")
         self.widget_39.setObjectName("widget_39")
@@ -343,12 +352,12 @@ class Ui_MainWindow(object):
         self.label_24.setStyleSheet("border-image: url(:/youxi/images/2048.jpg);")
         self.label_24.setText("")
         self.label_24.setObjectName("label_24")
-        self.pushButton_game_2048 = QtWidgets.QPushButton(self.widget_38)
+        self.pushButton_game_2048 = QtWidgets.QPushButton(self.widget_2048)
         self.pushButton_game_2048.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_2048.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_2048.setText("")
         self.pushButton_game_2048.setObjectName("pushButton_game_2048")
-        self.layoutWidget_2 = QtWidgets.QWidget(self.widget_38)
+        self.layoutWidget_2 = QtWidgets.QWidget(self.widget_2048)
         self.layoutWidget_2.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.layoutWidget_2)
@@ -403,18 +412,18 @@ class Ui_MainWindow(object):
         self.label_64.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_64.setObjectName("label_64")
         self.horizontalLayout_2.addWidget(self.label_64)
-        self.verticalLayout_15.addWidget(self.widget_38)
-        self.widget_40 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_40.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_40.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_40.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_2048)
+        self.widget_niao = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_niao.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_niao.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_niao.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_40.setObjectName("widget_40")
-        self.widget_41 = QtWidgets.QWidget(self.widget_40)
+        self.widget_niao.setObjectName("widget_niao")
+        self.widget_41 = QtWidgets.QWidget(self.widget_niao)
         self.widget_41.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_41.setStyleSheet("")
         self.widget_41.setObjectName("widget_41")
@@ -423,12 +432,12 @@ class Ui_MainWindow(object):
         self.label_25.setStyleSheet("border-image: url(:/youxi/images/FB.jpg);")
         self.label_25.setText("")
         self.label_25.setObjectName("label_25")
-        self.pushButton_game_niao = QtWidgets.QPushButton(self.widget_40)
+        self.pushButton_game_niao = QtWidgets.QPushButton(self.widget_niao)
         self.pushButton_game_niao.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_niao.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_niao.setText("")
         self.pushButton_game_niao.setObjectName("pushButton_game_niao")
-        self.layoutWidget_3 = QtWidgets.QWidget(self.widget_40)
+        self.layoutWidget_3 = QtWidgets.QWidget(self.widget_niao)
         self.layoutWidget_3.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_3.setObjectName("layoutWidget_3")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget_3)
@@ -483,18 +492,18 @@ class Ui_MainWindow(object):
         self.label_67.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_67.setObjectName("label_67")
         self.horizontalLayout_3.addWidget(self.label_67)
-        self.verticalLayout_15.addWidget(self.widget_40)
-        self.widget_42 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_42.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_42.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_42.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_niao)
+        self.widget_feiji = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_feiji.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_feiji.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_feiji.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_42.setObjectName("widget_42")
-        self.widget_43 = QtWidgets.QWidget(self.widget_42)
+        self.widget_feiji.setObjectName("widget_feiji")
+        self.widget_43 = QtWidgets.QWidget(self.widget_feiji)
         self.widget_43.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_43.setStyleSheet("")
         self.widget_43.setObjectName("widget_43")
@@ -503,12 +512,12 @@ class Ui_MainWindow(object):
         self.label_26.setStyleSheet("border-image: url(:/youxi/images/FJ.jpg);")
         self.label_26.setText("")
         self.label_26.setObjectName("label_26")
-        self.pushButton_game_feiji = QtWidgets.QPushButton(self.widget_42)
+        self.pushButton_game_feiji = QtWidgets.QPushButton(self.widget_feiji)
         self.pushButton_game_feiji.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_feiji.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_feiji.setText("")
         self.pushButton_game_feiji.setObjectName("pushButton_game_feiji")
-        self.layoutWidget_4 = QtWidgets.QWidget(self.widget_42)
+        self.layoutWidget_4 = QtWidgets.QWidget(self.widget_feiji)
         self.layoutWidget_4.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_4.setObjectName("layoutWidget_4")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.layoutWidget_4)
@@ -563,18 +572,18 @@ class Ui_MainWindow(object):
         self.label_70.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_70.setObjectName("label_70")
         self.horizontalLayout_4.addWidget(self.label_70)
-        self.verticalLayout_15.addWidget(self.widget_42)
-        self.widget_44 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_44.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_44.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_44.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_feiji)
+        self.widget_pingpang = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_pingpang.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_pingpang.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_pingpang.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_44.setObjectName("widget_44")
-        self.widget_45 = QtWidgets.QWidget(self.widget_44)
+        self.widget_pingpang.setObjectName("widget_pingpang")
+        self.widget_45 = QtWidgets.QWidget(self.widget_pingpang)
         self.widget_45.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_45.setStyleSheet("")
         self.widget_45.setObjectName("widget_45")
@@ -583,12 +592,12 @@ class Ui_MainWindow(object):
         self.label_27.setStyleSheet("border-image: url(:/youxi/images/PP.jpg);")
         self.label_27.setText("")
         self.label_27.setObjectName("label_27")
-        self.pushButton_game_pingpang = QtWidgets.QPushButton(self.widget_44)
+        self.pushButton_game_pingpang = QtWidgets.QPushButton(self.widget_pingpang)
         self.pushButton_game_pingpang.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_pingpang.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_pingpang.setText("")
         self.pushButton_game_pingpang.setObjectName("pushButton_game_pingpang")
-        self.layoutWidget_5 = QtWidgets.QWidget(self.widget_44)
+        self.layoutWidget_5 = QtWidgets.QWidget(self.widget_pingpang)
         self.layoutWidget_5.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_5.setObjectName("layoutWidget_5")
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.layoutWidget_5)
@@ -643,18 +652,18 @@ class Ui_MainWindow(object):
         self.label_73.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_73.setObjectName("label_73")
         self.horizontalLayout_5.addWidget(self.label_73)
-        self.verticalLayout_15.addWidget(self.widget_44)
-        self.widget_46 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_46.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_46.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_46.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_pingpang)
+        self.widget_tuixiangzi = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_tuixiangzi.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_tuixiangzi.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_tuixiangzi.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_46.setObjectName("widget_46")
-        self.widget_47 = QtWidgets.QWidget(self.widget_46)
+        self.widget_tuixiangzi.setObjectName("widget_tuixiangzi")
+        self.widget_47 = QtWidgets.QWidget(self.widget_tuixiangzi)
         self.widget_47.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_47.setStyleSheet("")
         self.widget_47.setObjectName("widget_47")
@@ -663,12 +672,12 @@ class Ui_MainWindow(object):
         self.label_28.setStyleSheet("border-image: url(:/youxi/images/TXZ.jpg);")
         self.label_28.setText("")
         self.label_28.setObjectName("label_28")
-        self.pushButton_game_tuixiangzi = QtWidgets.QPushButton(self.widget_46)
+        self.pushButton_game_tuixiangzi = QtWidgets.QPushButton(self.widget_tuixiangzi)
         self.pushButton_game_tuixiangzi.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_tuixiangzi.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_tuixiangzi.setText("")
         self.pushButton_game_tuixiangzi.setObjectName("pushButton_game_tuixiangzi")
-        self.layoutWidget_6 = QtWidgets.QWidget(self.widget_46)
+        self.layoutWidget_6 = QtWidgets.QWidget(self.widget_tuixiangzi)
         self.layoutWidget_6.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_6.setObjectName("layoutWidget_6")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.layoutWidget_6)
@@ -723,18 +732,18 @@ class Ui_MainWindow(object):
         self.label_76.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_76.setObjectName("label_76")
         self.horizontalLayout_6.addWidget(self.label_76)
-        self.verticalLayout_15.addWidget(self.widget_46)
-        self.widget_48 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_48.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_48.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_48.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_tuixiangzi)
+        self.widget_zoumigong = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_zoumigong.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_zoumigong.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_zoumigong.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_48.setObjectName("widget_48")
-        self.widget_49 = QtWidgets.QWidget(self.widget_48)
+        self.widget_zoumigong.setObjectName("widget_zoumigong")
+        self.widget_49 = QtWidgets.QWidget(self.widget_zoumigong)
         self.widget_49.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_49.setStyleSheet("")
         self.widget_49.setObjectName("widget_49")
@@ -743,12 +752,12 @@ class Ui_MainWindow(object):
         self.label_29.setStyleSheet("border-image: url(:/youxi/images/maze.jpg);")
         self.label_29.setText("")
         self.label_29.setObjectName("label_29")
-        self.pushButton_game_zoumigong = QtWidgets.QPushButton(self.widget_48)
+        self.pushButton_game_zoumigong = QtWidgets.QPushButton(self.widget_zoumigong)
         self.pushButton_game_zoumigong.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_zoumigong.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_zoumigong.setText("")
         self.pushButton_game_zoumigong.setObjectName("pushButton_game_zoumigong")
-        self.layoutWidget_7 = QtWidgets.QWidget(self.widget_48)
+        self.layoutWidget_7 = QtWidgets.QWidget(self.widget_zoumigong)
         self.layoutWidget_7.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_7.setObjectName("layoutWidget_7")
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.layoutWidget_7)
@@ -803,18 +812,18 @@ class Ui_MainWindow(object):
         self.label_79.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_79.setObjectName("label_79")
         self.horizontalLayout_7.addWidget(self.label_79)
-        self.verticalLayout_15.addWidget(self.widget_48)
-        self.widget_54 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_54.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_54.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_54.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_zoumigong)
+        self.widget_eluosi = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_eluosi.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_eluosi.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_eluosi.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_54.setObjectName("widget_54")
-        self.widget_55 = QtWidgets.QWidget(self.widget_54)
+        self.widget_eluosi.setObjectName("widget_eluosi")
+        self.widget_55 = QtWidgets.QWidget(self.widget_eluosi)
         self.widget_55.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_55.setStyleSheet("")
         self.widget_55.setObjectName("widget_55")
@@ -823,12 +832,12 @@ class Ui_MainWindow(object):
         self.label_32.setStyleSheet("border-image: url(:/youxi/images/tetris.jpg);")
         self.label_32.setText("")
         self.label_32.setObjectName("label_32")
-        self.pushButton_game_eluosi = QtWidgets.QPushButton(self.widget_54)
+        self.pushButton_game_eluosi = QtWidgets.QPushButton(self.widget_eluosi)
         self.pushButton_game_eluosi.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_eluosi.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_eluosi.setText("")
         self.pushButton_game_eluosi.setObjectName("pushButton_game_eluosi")
-        self.layoutWidget_10 = QtWidgets.QWidget(self.widget_54)
+        self.layoutWidget_10 = QtWidgets.QWidget(self.widget_eluosi)
         self.layoutWidget_10.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_10.setObjectName("layoutWidget_10")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.layoutWidget_10)
@@ -883,18 +892,18 @@ class Ui_MainWindow(object):
         self.label_88.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_88.setObjectName("label_88")
         self.horizontalLayout_10.addWidget(self.label_88)
-        self.verticalLayout_15.addWidget(self.widget_54)
-        self.widget_52 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_52.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_52.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_52.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_eluosi)
+        self.widget_xiaoxiaole = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_xiaoxiaole.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_xiaoxiaole.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_xiaoxiaole.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_52.setObjectName("widget_52")
-        self.widget_53 = QtWidgets.QWidget(self.widget_52)
+        self.widget_xiaoxiaole.setObjectName("widget_xiaoxiaole")
+        self.widget_53 = QtWidgets.QWidget(self.widget_xiaoxiaole)
         self.widget_53.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_53.setStyleSheet("")
         self.widget_53.setObjectName("widget_53")
@@ -903,12 +912,12 @@ class Ui_MainWindow(object):
         self.label_31.setStyleSheet("border-image: url(:/youxi/images/xxl.jpg);")
         self.label_31.setText("")
         self.label_31.setObjectName("label_31")
-        self.pushButton_game_xiaoxiaole = QtWidgets.QPushButton(self.widget_52)
+        self.pushButton_game_xiaoxiaole = QtWidgets.QPushButton(self.widget_xiaoxiaole)
         self.pushButton_game_xiaoxiaole.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_xiaoxiaole.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_xiaoxiaole.setText("")
         self.pushButton_game_xiaoxiaole.setObjectName("pushButton_game_xiaoxiaole")
-        self.layoutWidget_9 = QtWidgets.QWidget(self.widget_52)
+        self.layoutWidget_9 = QtWidgets.QWidget(self.widget_xiaoxiaole)
         self.layoutWidget_9.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_9.setObjectName("layoutWidget_9")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.layoutWidget_9)
@@ -963,18 +972,18 @@ class Ui_MainWindow(object):
         self.label_85.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_85.setObjectName("label_85")
         self.horizontalLayout_9.addWidget(self.label_85)
-        self.verticalLayout_15.addWidget(self.widget_52)
-        self.widget_50 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
-        self.widget_50.setMinimumSize(QtCore.QSize(0, 121))
-        self.widget_50.setMaximumSize(QtCore.QSize(16777215, 121))
-        self.widget_50.setStyleSheet(".QWidget{\n"
+        self.verticalLayout_15.addWidget(self.widget_xiaoxiaole)
+        self.widget_tanchishe = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
+        self.widget_tanchishe.setMinimumSize(QtCore.QSize(0, 121))
+        self.widget_tanchishe.setMaximumSize(QtCore.QSize(16777215, 121))
+        self.widget_tanchishe.setStyleSheet(".QWidget{\n"
 "    background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));\n"
 "    border-radius:20px;\n"
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.widget_50.setObjectName("widget_50")
-        self.widget_51 = QtWidgets.QWidget(self.widget_50)
+        self.widget_tanchishe.setObjectName("widget_tanchishe")
+        self.widget_51 = QtWidgets.QWidget(self.widget_tanchishe)
         self.widget_51.setGeometry(QtCore.QRect(24, 24, 113, 73))
         self.widget_51.setStyleSheet("")
         self.widget_51.setObjectName("widget_51")
@@ -983,12 +992,12 @@ class Ui_MainWindow(object):
         self.label_30.setStyleSheet("border-image: url(:/youxi/images/TCS.jpg);")
         self.label_30.setText("")
         self.label_30.setObjectName("label_30")
-        self.pushButton_game_tanchishe = QtWidgets.QPushButton(self.widget_50)
+        self.pushButton_game_tanchishe = QtWidgets.QPushButton(self.widget_tanchishe)
         self.pushButton_game_tanchishe.setGeometry(QtCore.QRect(660, 30, 64, 64))
         self.pushButton_game_tanchishe.setStyleSheet("border-image: url(:/icons/icons/play_game.png);")
         self.pushButton_game_tanchishe.setText("")
         self.pushButton_game_tanchishe.setObjectName("pushButton_game_tanchishe")
-        self.layoutWidget_8 = QtWidgets.QWidget(self.widget_50)
+        self.layoutWidget_8 = QtWidgets.QWidget(self.widget_tanchishe)
         self.layoutWidget_8.setGeometry(QtCore.QRect(162, 25, 481, 72))
         self.layoutWidget_8.setObjectName("layoutWidget_8")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.layoutWidget_8)
@@ -1043,7 +1052,7 @@ class Ui_MainWindow(object):
         self.label_82.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.label_82.setObjectName("label_82")
         self.horizontalLayout_8.addWidget(self.label_82)
-        self.verticalLayout_15.addWidget(self.widget_50)
+        self.verticalLayout_15.addWidget(self.widget_tanchishe)
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(5, 0, 1159, 771))
@@ -1092,9 +1101,9 @@ class Ui_MainWindow(object):
         self.pushButton_2.setGeometry(QtCore.QRect(885, 10, 42, 31))
         self.pushButton_2.setStyleSheet("border-radius:20px;")
         self.pushButton_2.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icons/image/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_2.setIcon(icon4)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icons/image/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_2.setIcon(icon5)
         self.pushButton_2.setObjectName("pushButton_2")
         self.scrollArea_4 = QtWidgets.QScrollArea(self.widget_musics)
         self.scrollArea_4.setGeometry(QtCore.QRect(13, 90, 929, 681))
@@ -1181,36 +1190,36 @@ class Ui_MainWindow(object):
         self.pushButton_sound.setGeometry(QtCore.QRect(620, 120, 31, 31))
         self.pushButton_sound.setStyleSheet("/*border-image: url(:/icons/icons/sound_on.png);")
         self.pushButton_sound.setText("")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/icons/icons/sound_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_sound.setIcon(icon5)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/icons/icons/sound_on.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_sound.setIcon(icon6)
         self.pushButton_sound.setIconSize(QtCore.QSize(28, 28))
         self.pushButton_sound.setObjectName("pushButton_sound")
         self.pushButton_play_pause = QtWidgets.QPushButton(self.widget_enroll)
         self.pushButton_play_pause.setGeometry(QtCore.QRect(703, 120, 31, 31))
         self.pushButton_play_pause.setStyleSheet("")
         self.pushButton_play_pause.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icons/icons/play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_play_pause.setIcon(icon6)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/icons/icons/play.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_play_pause.setIcon(icon7)
         self.pushButton_play_pause.setIconSize(QtCore.QSize(20, 20))
         self.pushButton_play_pause.setObjectName("pushButton_play_pause")
         self.pushButton_musicChange = QtWidgets.QPushButton(self.widget_enroll)
         self.pushButton_musicChange.setGeometry(QtCore.QRect(785, 120, 31, 31))
         self.pushButton_musicChange.setStyleSheet("/*border-image: url(:/icons/icons/music_change.png);")
         self.pushButton_musicChange.setText("")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/icons/icons/music_change.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_musicChange.setIcon(icon7)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/icons/icons/music_change.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_musicChange.setIcon(icon8)
         self.pushButton_musicChange.setIconSize(QtCore.QSize(28, 28))
         self.pushButton_musicChange.setObjectName("pushButton_musicChange")
         self.pushButton_musicRandomChange = QtWidgets.QPushButton(self.widget_enroll)
         self.pushButton_musicRandomChange.setGeometry(QtCore.QRect(780, 25, 40, 40))
         self.pushButton_musicRandomChange.setStyleSheet("/*border-image: url(:/icons/icons/random_change.png);")
         self.pushButton_musicRandomChange.setText("")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/icons/icons/random_change.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_musicRandomChange.setIcon(icon8)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/icons/icons/random_change.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_musicRandomChange.setIcon(icon9)
         self.pushButton_musicRandomChange.setIconSize(QtCore.QSize(35, 35))
         self.pushButton_musicRandomChange.setObjectName("pushButton_musicRandomChange")
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
@@ -1244,7 +1253,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setGeometry(QtCore.QRect(885, 10, 42, 31))
         self.pushButton_3.setStyleSheet("border-radius:20px;")
         self.pushButton_3.setText("")
-        self.pushButton_3.setIcon(icon4)
+        self.pushButton_3.setIcon(icon5)
         self.pushButton_3.setObjectName("pushButton_3")
         self.table = QtWidgets.QTableWidget(self.widget_users)
         self.table.setGeometry(QtCore.QRect(47, 150, 842, 561))
@@ -1252,16 +1261,72 @@ class Ui_MainWindow(object):
         self.table.setColumnCount(0)
         self.table.setObjectName("table")
         self.pushButton_add = QtWidgets.QPushButton(self.widget_users)
-        self.pushButton_add.setGeometry(QtCore.QRect(310, 100, 92, 28))
+        self.pushButton_add.setGeometry(QtCore.QRect(310, 80, 103, 61))
+        self.pushButton_add.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_add.setObjectName("pushButton_add")
         self.pushButton_delete = QtWidgets.QPushButton(self.widget_users)
-        self.pushButton_delete.setGeometry(QtCore.QRect(470, 100, 92, 28))
+        self.pushButton_delete.setGeometry(QtCore.QRect(470, 80, 103, 61))
+        self.pushButton_delete.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_delete.setObjectName("pushButton_delete")
         self.pushButton_refresh = QtWidgets.QPushButton(self.widget_users)
-        self.pushButton_refresh.setGeometry(QtCore.QRect(620, 100, 92, 28))
+        self.pushButton_refresh.setGeometry(QtCore.QRect(620, 80, 103, 61))
+        self.pushButton_refresh.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_refresh.setObjectName("pushButton_refresh")
         self.pushButton_save = QtWidgets.QPushButton(self.widget_users)
-        self.pushButton_save.setGeometry(QtCore.QRect(760, 100, 92, 28))
+        self.pushButton_save.setGeometry(QtCore.QRect(760, 80, 103, 61))
+        self.pushButton_save.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_save.setObjectName("pushButton_save")
         self.lineEdit_num = QtWidgets.QLineEdit(self.widget_users)
         self.lineEdit_num.setGeometry(QtCore.QRect(150, 90, 101, 41))
@@ -1299,7 +1364,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.setGeometry(QtCore.QRect(885, 10, 42, 31))
         self.pushButton_4.setStyleSheet("border-radius:20px;")
         self.pushButton_4.setText("")
-        self.pushButton_4.setIcon(icon4)
+        self.pushButton_4.setIcon(icon5)
         self.pushButton_4.setObjectName("pushButton_4")
         self.tablequanxian = QtWidgets.QTableWidget(self.widget_quanxians)
         self.tablequanxian.setGeometry(QtCore.QRect(47, 150, 842, 561))
@@ -1314,25 +1379,199 @@ class Ui_MainWindow(object):
         self.lineEdit_num1.setGeometry(QtCore.QRect(150, 90, 101, 41))
         self.lineEdit_num1.setObjectName("lineEdit_num1")
         self.pushButton_add1 = QtWidgets.QPushButton(self.widget_quanxians)
-        self.pushButton_add1.setGeometry(QtCore.QRect(310, 100, 92, 28))
+        self.pushButton_add1.setGeometry(QtCore.QRect(310, 80, 103, 61))
+        self.pushButton_add1.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_add1.setObjectName("pushButton_add1")
         self.pushButton_refresh1 = QtWidgets.QPushButton(self.widget_quanxians)
-        self.pushButton_refresh1.setGeometry(QtCore.QRect(620, 100, 92, 28))
+        self.pushButton_refresh1.setGeometry(QtCore.QRect(620, 81, 103, 61))
+        self.pushButton_refresh1.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_refresh1.setObjectName("pushButton_refresh1")
         self.pushButton_delete1 = QtWidgets.QPushButton(self.widget_quanxians)
-        self.pushButton_delete1.setGeometry(QtCore.QRect(470, 100, 92, 28))
+        self.pushButton_delete1.setGeometry(QtCore.QRect(470, 80, 103, 61))
+        self.pushButton_delete1.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_delete1.setObjectName("pushButton_delete1")
         self.pushButton_save1 = QtWidgets.QPushButton(self.widget_quanxians)
-        self.pushButton_save1.setGeometry(QtCore.QRect(760, 100, 92, 28))
+        self.pushButton_save1.setGeometry(QtCore.QRect(760, 80, 103, 61))
+        self.pushButton_save1.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_save1.setObjectName("pushButton_save1")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(1110, 10, 42, 31))
         self.pushButton.setStyleSheet("border-radius:20px;")
         self.pushButton.setText("")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/icons/icons/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton.setIcon(icon9)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/icons/icons/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton.setIcon(icon10)
         self.pushButton.setObjectName("pushButton")
+        self.widget_musics_download = QtWidgets.QWidget(self.centralwidget)
+        self.widget_musics_download.setGeometry(QtCore.QRect(219, 0, 945, 771))
+        self.widget_musics_download.setStyleSheet("widget{\n"
+"border:none;\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"}")
+        self.widget_musics_download.setObjectName("widget_musics_download")
+        self.frame_music_download = QtWidgets.QFrame(self.widget_musics_download)
+        self.frame_music_download.setGeometry(QtCore.QRect(1, 0, 940, 71))
+        self.frame_music_download.setStyleSheet(".QFrame{\n"
+"    background-color: rgba(255, 255, 255, 0);\n"
+"    border-radius:20px;\n"
+"}")
+        self.frame_music_download.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_music_download.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_music_download.setObjectName("frame_music_download")
+        self.label_music_download = QtWidgets.QLabel(self.frame_music_download)
+        self.label_music_download.setGeometry(QtCore.QRect(304, 30, 280, 35))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(18)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_music_download.setFont(font)
+        self.label_music_download.setStyleSheet("color: rgb(22, 54, 53)")
+        self.label_music_download.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_music_download.setObjectName("label_music_download")
+        self.pushButton_6 = QtWidgets.QPushButton(self.frame_music_download)
+        self.pushButton_6.setGeometry(QtCore.QRect(885, 10, 42, 31))
+        self.pushButton_6.setStyleSheet("border-radius:20px;")
+        self.pushButton_6.setText("")
+        self.pushButton_6.setIcon(icon5)
+        self.pushButton_6.setObjectName("pushButton_6")
+        self.pushButton_music_download = QtWidgets.QPushButton(self.widget_musics_download)
+        self.pushButton_music_download.setGeometry(QtCore.QRect(420, 715, 103, 50))
+        self.pushButton_music_download.setStyleSheet("QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_music_download.setObjectName("pushButton_music_download")
+        self.lineEdit_music_search = QtWidgets.QLineEdit(self.widget_musics_download)
+        self.lineEdit_music_search.setGeometry(QtCore.QRect(289, 90, 404, 41))
+        self.lineEdit_music_search.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(255, 255, 255)\n"
+"border:0px solid red;\n"
+"border-radius:14px;\n"
+"}")
+        self.lineEdit_music_search.setObjectName("lineEdit_music_search")
+        self.tableWidget_music_download = QtWidgets.QTableWidget(self.widget_musics_download)
+        self.tableWidget_music_download.setGeometry(QtCore.QRect(47, 150, 842, 561))
+        self.tableWidget_music_download.setObjectName("tableWidget_music_download")
+        self.tableWidget_music_download.setColumnCount(3)
+        self.tableWidget_music_download.setRowCount(1)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_music_download.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_music_download.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_music_download.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget_music_download.setHorizontalHeaderItem(2, item)
+        self.frame_7 = QtWidgets.QFrame(self.widget_musics_download)
+        self.frame_7.setGeometry(QtCore.QRect(43, 90, 242, 46))
+        self.frame_7.setStyleSheet("QFrame{\n"
+"    background-color: rgb(89, 217, 212);\n"
+"    border-radius:20px;color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"")
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.frame_7)
+        self.horizontalLayout_11.setObjectName("horizontalLayout_11")
+        self.label_musicDownload = QtWidgets.QLabel(self.frame_7)
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_musicDownload.setFont(font)
+        self.label_musicDownload.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_musicDownload.setObjectName("label_musicDownload")
+        self.horizontalLayout_11.addWidget(self.label_musicDownload)
+        self.pushButton_music_search = QtWidgets.QPushButton(self.widget_musics_download)
+        self.pushButton_music_search.setGeometry(QtCore.QRect(709, 90, 110, 41))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_music_search.setFont(font)
+        self.pushButton_music_search.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_music_search.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_music_search.setObjectName("pushButton_music_search")
         self.widget_musics_management = QtWidgets.QWidget(self.centralwidget)
         self.widget_musics_management.setGeometry(QtCore.QRect(219, 0, 945, 771))
         self.widget_musics_management.setStyleSheet("widget{\n"
@@ -1358,99 +1597,270 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.label_music_manage.setFont(font)
         self.label_music_manage.setStyleSheet("color: rgb(22, 54, 53)")
+        self.label_music_manage.setAlignment(QtCore.Qt.AlignCenter)
         self.label_music_manage.setObjectName("label_music_manage")
         self.pushButton_5 = QtWidgets.QPushButton(self.frame_music_manage)
         self.pushButton_5.setGeometry(QtCore.QRect(885, 10, 42, 31))
         self.pushButton_5.setStyleSheet("border-radius:20px;")
         self.pushButton_5.setText("")
-        self.pushButton_5.setIcon(icon4)
+        self.pushButton_5.setIcon(icon5)
         self.pushButton_5.setObjectName("pushButton_5")
-        self.table_music = QtWidgets.QTableWidget(self.widget_musics_management)
-        self.table_music.setGeometry(QtCore.QRect(47, 150, 842, 561))
-        self.table_music.setRowCount(0)
-        self.table_music.setColumnCount(0)
-        self.table_music.setObjectName("table_music")
         self.pushButton_add_music = QtWidgets.QPushButton(self.widget_musics_management)
-        self.pushButton_add_music.setGeometry(QtCore.QRect(120, 100, 92, 28))
+        self.pushButton_add_music.setGeometry(QtCore.QRect(119, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_add_music.setFont(font)
+        self.pushButton_add_music.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_add_music.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_add_music.setObjectName("pushButton_add_music")
         self.pushButton_delete_music = QtWidgets.QPushButton(self.widget_musics_management)
-        self.pushButton_delete_music.setGeometry(QtCore.QRect(330, 100, 92, 28))
+        self.pushButton_delete_music.setGeometry(QtCore.QRect(327, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_delete_music.setFont(font)
+        self.pushButton_delete_music.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_delete_music.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_delete_music.setObjectName("pushButton_delete_music")
         self.pushButton_refresh_music = QtWidgets.QPushButton(self.widget_musics_management)
-        self.pushButton_refresh_music.setGeometry(QtCore.QRect(550, 100, 92, 28))
+        self.pushButton_refresh_music.setGeometry(QtCore.QRect(535, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_refresh_music.setFont(font)
+        self.pushButton_refresh_music.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_refresh_music.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_refresh_music.setObjectName("pushButton_refresh_music")
         self.pushButton_save_music = QtWidgets.QPushButton(self.widget_musics_management)
-        self.pushButton_save_music.setGeometry(QtCore.QRect(720, 100, 92, 28))
+        self.pushButton_save_music.setGeometry(QtCore.QRect(743, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_save_music.setFont(font)
+        self.pushButton_save_music.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_save_music.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
         self.pushButton_save_music.setObjectName("pushButton_save_music")
-        self.widget_musics_download = QtWidgets.QWidget(self.centralwidget)
-        self.widget_musics_download.setGeometry(QtCore.QRect(219, 0, 945, 771))
-        self.widget_musics_download.setStyleSheet("widget{\n"
+        self.table_music = QtWidgets.QTableWidget(self.widget_musics_management)
+        self.table_music.setGeometry(QtCore.QRect(41, 150, 842, 561))
+        self.table_music.setObjectName("table_music")
+        self.table_music.setColumnCount(0)
+        self.table_music.setRowCount(0)
+        self.widget_games_management = QtWidgets.QWidget(self.centralwidget)
+        self.widget_games_management.setGeometry(QtCore.QRect(219, 0, 945, 771))
+        self.widget_games_management.setStyleSheet("widget{\n"
 "border:none;\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "}")
-        self.widget_musics_download.setObjectName("widget_musics_download")
-        self.frame_music_download = QtWidgets.QFrame(self.widget_musics_download)
-        self.frame_music_download.setGeometry(QtCore.QRect(1, 0, 940, 71))
-        self.frame_music_download.setStyleSheet(".QFrame{\n"
+        self.widget_games_management.setObjectName("widget_games_management")
+        self.frame_game_manage = QtWidgets.QFrame(self.widget_games_management)
+        self.frame_game_manage.setGeometry(QtCore.QRect(1, 0, 940, 71))
+        self.frame_game_manage.setStyleSheet(".QFrame{\n"
 "    background-color: rgba(255, 255, 255, 0);\n"
 "    border-radius:20px;\n"
 "}")
-        self.frame_music_download.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_music_download.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_music_download.setObjectName("frame_music_download")
-        self.label_music_download = QtWidgets.QLabel(self.frame_music_download)
-        self.label_music_download.setGeometry(QtCore.QRect(321, 10, 280, 35))
+        self.frame_game_manage.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_game_manage.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_game_manage.setObjectName("frame_game_manage")
+        self.label_game_manage = QtWidgets.QLabel(self.frame_game_manage)
+        self.label_game_manage.setGeometry(QtCore.QRect(321, 10, 280, 35))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(18)
         font.setBold(False)
         font.setWeight(50)
-        self.label_music_download.setFont(font)
-        self.label_music_download.setStyleSheet("color: rgb(22, 54, 53)")
-        self.label_music_download.setObjectName("label_music_download")
-        self.pushButton_6 = QtWidgets.QPushButton(self.frame_music_download)
-        self.pushButton_6.setGeometry(QtCore.QRect(885, 10, 42, 31))
-        self.pushButton_6.setStyleSheet("border-radius:20px;")
-        self.pushButton_6.setText("")
-        self.pushButton_6.setIcon(icon4)
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.pushButton_music_download = QtWidgets.QPushButton(self.widget_musics_download)
-        self.pushButton_music_download.setGeometry(QtCore.QRect(420, 730, 92, 28))
-        self.pushButton_music_download.setObjectName("pushButton_music_download")
-        self.pushButton_music_search = QtWidgets.QPushButton(self.widget_musics_download)
-        self.pushButton_music_search.setGeometry(QtCore.QRect(610, 100, 92, 28))
-        self.pushButton_music_search.setObjectName("pushButton_music_search")
-        self.lineEdit_music_search = QtWidgets.QLineEdit(self.widget_musics_download)
-        self.lineEdit_music_search.setGeometry(QtCore.QRect(320, 90, 271, 41))
-        self.lineEdit_music_search.setObjectName("lineEdit_music_search")
-        self.label = QtWidgets.QLabel(self.widget_musics_download)
-        self.label.setGeometry(QtCore.QRect(100, 80, 201, 51))
-        self.label.setObjectName("label")
-        self.tableWidget_music_download = QtWidgets.QTableWidget(self.widget_musics_download)
-        self.tableWidget_music_download.setGeometry(QtCore.QRect(47, 150, 842, 561))
-        self.tableWidget_music_download.setObjectName("tableWidget_music_download")
-        self.tableWidget_music_download.setColumnCount(3)
-        self.tableWidget_music_download.setRowCount(1)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_music_download.setVerticalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_music_download.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_music_download.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_music_download.setHorizontalHeaderItem(2, item)
+        self.label_game_manage.setFont(font)
+        self.label_game_manage.setStyleSheet("color: rgb(22, 54, 53)")
+        self.label_game_manage.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_game_manage.setObjectName("label_game_manage")
+        self.pushButton_7 = QtWidgets.QPushButton(self.frame_game_manage)
+        self.pushButton_7.setGeometry(QtCore.QRect(885, 10, 42, 31))
+        self.pushButton_7.setStyleSheet("border-radius:20px;")
+        self.pushButton_7.setText("")
+        self.pushButton_7.setIcon(icon5)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.pushButton_add_game = QtWidgets.QPushButton(self.widget_games_management)
+        self.pushButton_add_game.setGeometry(QtCore.QRect(119, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_add_game.setFont(font)
+        self.pushButton_add_game.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_add_game.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_add_game.setObjectName("pushButton_add_game")
+        self.pushButton_delete_game = QtWidgets.QPushButton(self.widget_games_management)
+        self.pushButton_delete_game.setGeometry(QtCore.QRect(327, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_delete_game.setFont(font)
+        self.pushButton_delete_game.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_delete_game.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_delete_game.setObjectName("pushButton_delete_game")
+        self.pushButton_refresh_game = QtWidgets.QPushButton(self.widget_games_management)
+        self.pushButton_refresh_game.setGeometry(QtCore.QRect(535, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_refresh_game.setFont(font)
+        self.pushButton_refresh_game.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_refresh_game.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_refresh_game.setObjectName("pushButton_refresh_game")
+        self.pushButton_save_game = QtWidgets.QPushButton(self.widget_games_management)
+        self.pushButton_save_game.setGeometry(QtCore.QRect(743, 80, 103, 61))
+        font = QtGui.QFont()
+        font.setFamily("幼圆")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.pushButton_save_game.setFont(font)
+        self.pushButton_save_game.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.pushButton_save_game.setStyleSheet("\n"
+"QPushButton\n"
+"{\n"
+"    background-color:rgb(214, 244, 249);\n"
+"border-radius:20px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed\n"
+"{\n"
+"    background-color:rgb(103, 216, 217);\n"
+"    padding-left:3px;\n"
+"    padding-top:3px;\n"
+"}\n"
+"")
+        self.pushButton_save_game.setObjectName("pushButton_save_game")
+        self.table_game = QtWidgets.QTableWidget(self.widget_games_management)
+        self.table_game.setGeometry(QtCore.QRect(41, 150, 842, 561))
+        self.table_game.setObjectName("table_game")
+        self.table_game.setColumnCount(0)
+        self.table_game.setRowCount(0)
         self.label_6.raise_()
         self.frame_2.raise_()
         self.widget_users.raise_()
         self.widget_quanxians.raise_()
-        self.widget_games.raise_()
-        self.widget_musics_management.raise_()
-        self.widget_musics_download.raise_()
         self.widget_musics.raise_()
+        self.widget_musics_download.raise_()
+        self.widget_musics_management.raise_()
+        self.widget_games.raise_()
+        self.widget_games_management.raise_()
         self.pushButton.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1167, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1164, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -1528,15 +1938,8 @@ class Ui_MainWindow(object):
         self.pushButton_refresh1.setText(_translate("MainWindow", "刷新数据"))
         self.pushButton_delete1.setText(_translate("MainWindow", "删除账户"))
         self.pushButton_save1.setText(_translate("MainWindow", "保存数据"))
-        self.label_music_manage.setText(_translate("MainWindow", "Music management"))
-        self.pushButton_add_music.setText(_translate("MainWindow", "添加音乐"))
-        self.pushButton_delete_music.setText(_translate("MainWindow", "删除音乐"))
-        self.pushButton_refresh_music.setText(_translate("MainWindow", "刷新数据"))
-        self.pushButton_save_music.setText(_translate("MainWindow", "保存数据"))
         self.label_music_download.setText(_translate("MainWindow", "Music download"))
         self.pushButton_music_download.setText(_translate("MainWindow", "下载"))
-        self.pushButton_music_search.setText(_translate("MainWindow", "搜索"))
-        self.label.setText(_translate("MainWindow", "请输入歌手名或歌曲名："))
         item = self.tableWidget_music_download.verticalHeaderItem(0)
         item.setText(_translate("MainWindow", "1"))
         item = self.tableWidget_music_download.horizontalHeaderItem(0)
@@ -1545,4 +1948,16 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "歌曲"))
         item = self.tableWidget_music_download.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "专辑"))
+        self.label_musicDownload.setText(_translate("MainWindow", "请输入歌曲名或歌手名："))
+        self.pushButton_music_search.setText(_translate("MainWindow", "搜索"))
+        self.label_music_manage.setText(_translate("MainWindow", "Music management"))
+        self.pushButton_add_music.setText(_translate("MainWindow", "添加音乐"))
+        self.pushButton_delete_music.setText(_translate("MainWindow", "删除音乐"))
+        self.pushButton_refresh_music.setText(_translate("MainWindow", "刷新音乐"))
+        self.pushButton_save_music.setText(_translate("MainWindow", "保存数据"))
+        self.label_game_manage.setText(_translate("MainWindow", "Game management"))
+        self.pushButton_add_game.setText(_translate("MainWindow", "添加游戏"))
+        self.pushButton_delete_game.setText(_translate("MainWindow", "删除游戏"))
+        self.pushButton_refresh_game.setText(_translate("MainWindow", "刷新游戏"))
+        self.pushButton_save_game.setText(_translate("MainWindow", "保存数据"))
 import resource_rc

@@ -18,6 +18,8 @@ class Controller:
     # 显示登陆与注册窗口
     def show_login(self):
         self.login = Login()
+        if self.gameScreen:
+            self.gameScreen.close()
         self.login.switch_window.connect(self.identify_Administrator_User)
         self.login.show()
 
@@ -49,6 +51,8 @@ class Controller:
             self.login.close()
         if self.verify:
             self.verify.close()
+        # 若收到返回信号则回到登陆页面
+        self.gameScreen.switch_window.connect(self.show_login)
         self.gameScreen.show()
         pass
 

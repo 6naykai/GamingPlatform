@@ -84,6 +84,7 @@ class GameScreen_musicManagement(GameScreen_init, QMainWindow):
         exec('self.checkBox_ruku{} = QtWidgets.QCheckBox()'.format(num))
         exec('self.checkBox_ruku{}.setChecked(True)'.format(num))
         exec('self.checkBox_ruku{}.stateChanged.connect(self._dataChanged_music)'.format(num))
+
         if item is not None:
             _0.setText(str(item[0]))
             _1.setText(str(item[1]))
