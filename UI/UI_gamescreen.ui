@@ -500,9 +500,9 @@ background:url(:/image/image/xia.png) center no-repeat;}             </string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-2267</y>
         <width>908</width>
-        <height>1498</height>
+        <height>3093</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -2179,6 +2179,1854 @@ background-color: rgb(223, 223, 223);
            </item>
            <item>
             <widget class="QLabel" name="label_82">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_0" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_52" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_0">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_0">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_11">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_0">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game0</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_89">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_27">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_90">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_1" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_54" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_1">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_1">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_12">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_13">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_1">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game1</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_91">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_28">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_92">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_56" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_2">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_13">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_2">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game2</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_93">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_29">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_94">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_3" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_57" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_3">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_14">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_16">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_3">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game3</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_95">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_30">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_96">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_4" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_58" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_4">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_15">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_4">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game4</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_97">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_31">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_98">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_5" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_59" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_5">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_5">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_16">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_5">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game5</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_99">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_32">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_100">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_6" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_60" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_6">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_17">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_6">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game6</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_101">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_33">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_102">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_7" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_61" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_7">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_7">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_18">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_20">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_7">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game7</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_103">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_34">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_104">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_8" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_62" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_8">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_8">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_19">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_21">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_8">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game8</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_105">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_35">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_106">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_9" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_63" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_9">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_9">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_20">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_22">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_9">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game9</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_107">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_36">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_108">
+             <property name="font">
+              <font>
+               <pointsize>17</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(43, 101, 103);</string>
+             </property>
+             <property name="text">
+              <string>100%</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_game_10" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>121</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">.QWidget{
+	background-color: qlineargradient(x1:0, y0:0, x2:1, y2:0,stop:0 rgb(225, 245, 249), stop:1 rgb(155, 230, 237));
+	border-radius:20px;
+	color: rgb(255, 255, 255);
+}
+</string>
+         </property>
+         <widget class="QWidget" name="widget_64" native="true">
+          <property name="geometry">
+           <rect>
+            <x>24</x>
+            <y>24</y>
+            <width>113</width>
+            <height>73</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QLabel" name="label_icon_game_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>5</y>
+             <width>64</width>
+             <height>64</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/icons/icons/自定义.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushButton_game_10">
+          <property name="geometry">
+           <rect>
+            <x>660</x>
+            <y>30</y>
+            <width>64</width>
+            <height>64</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/icons/icons/play_game.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_21">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>25</y>
+            <width>481</width>
+            <height>72</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_23">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_game_10">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53);
+text-align:centre;
+</string>
+               </property>
+               <property name="text">
+                <string>game10</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_109">
+               <property name="font">
+                <font>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(22, 54, 53)</string>
+               </property>
+               <property name="text">
+                <string>下载完成</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar_37">
+               <property name="styleSheet">
+                <string notr="true">QProgressBar::chunk {
+        border-top-left-radius:8px;
+border-bottom-left-radius:8px;
+	background-color: rgb(103, 216, 217)
+}
+QProgressBar{
+border-radius:8px;
+background-color: rgb(223, 223, 223);
+}
+</string>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+               <property name="textVisible">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_110">
              <property name="font">
               <font>
                <pointsize>17</pointsize>
@@ -3881,8 +5729,8 @@ QPushButton:pressed
    <zorder>widget_musics</zorder>
    <zorder>widget_musics_download</zorder>
    <zorder>widget_musics_management</zorder>
-   <zorder>widget_games</zorder>
    <zorder>widget_games_management</zorder>
+   <zorder>widget_games</zorder>
    <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
